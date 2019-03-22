@@ -1,0 +1,14 @@
+qppsim.TraceWriter module
+=========================
+
+.. inheritance-diagram:: qppsim.TraceWriter
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.TraceWriter
+    :members:
+    :undoc-members:
+    :show-inheritance:

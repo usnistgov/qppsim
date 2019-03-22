@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.Bearer module &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qppsim.BearerList module" href="qppsim.BearerList.html" />
+    <link rel="prev" title="qppsim.Application module" href="qppsim.Application.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="qppsim.html">qppsim package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="qppsim.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Amc.html">qppsim.Amc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.AppProfile.html">qppsim.AppProfile module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Application.html">qppsim.Application module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">qppsim.Bearer module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-qppsim.Bearer">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.BearerList.html">qppsim.BearerList module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Des.html">qppsim.Des module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Event.html">qppsim.Event module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Packet.html">qppsim.Packet module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Time.html">qppsim.Time module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.TraceWriter.html">qppsim.TraceWriter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Ue.html">qppsim.Ue module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.XmlScenarioParser.html">qppsim.XmlScenarioParser module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="qppsim.html">qppsim package</a> &raquo;</li>
+        
+      <li>qppsim.Bearer module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/qppsim.Bearer.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="qppsim-bearer-module">
+<h1>qppsim.Bearer module<a class="headerlink" href="#qppsim-bearer-module" title="Permalink to this headline">¶</a></h1>
+<img src="_images/inheritance-661cd3493a88222f54b75429c8c64f0a2a17c7a7.png" alt="Inheritance diagram of qppsim.Bearer" usemap="#inheritanced68aec9c6e" class="inheritance"/>
+<map id="inheritanced68aec9c6e" name="inheritanced68aec9c6e">
+<area shape="rect" id="node1" href="#qppsim.Bearer.Bearer" target="_top" title="Class providing the model for Bearers. It includes the QoS and ARP configuration" alt="" coords="13,55,176,80"/>
+<area shape="rect" id="node2" title="QoSTuple(min, avg, max, last)" alt="" coords="5,5,184,31"/>
+</map>
+<div class="section" id="module-qppsim.Bearer">
+<span id="documentation"></span><h2>Documentation<a class="headerlink" href="#module-qppsim.Bearer" title="Permalink to this headline">¶</a></h2>
+<p>Module that provides the model for a Bearer</p>
+<dl class="class">
+<dt id="qppsim.Bearer.Bearer">
+<em class="property">class </em><code class="descclassname">qppsim.Bearer.</code><code class="descname">Bearer</code><span class="sig-paren">(</span><em>ue</em>, <em>qci</em>, <em>gbr</em>, <em>mbr</em>, <em>pvi</em>, <em>pci</em>, <em>arp</em>, <em>queue_size</em>, <em>port</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Bearer.html#Bearer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Bearer.Bearer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class providing the model for Bearers. It includes the QoS and ARP configuration
+of the bearer, a reference to the UE that activates the Bearer, the size of the
+RLC queue for the Bearer, and the port used by the application linked to this
+bearer (used only for tracing purposes).</p>
+<p>A bearer may be dedicated, or default. Dedicated bearers are linked to
+application instances in a 1-to-1 relation. Default bearers may have 0 to n
+application instances linked to them, and therefore their &#8216;port&#8217; member is set
+to &#8216;None&#8217;.</p>
+<p>The class is hashable and comparable.</p>
+<dl class="method">
+<dt id="qppsim.Bearer.Bearer.add_packet">
+<code class="descname">add_packet</code><span class="sig-paren">(</span><em>packet</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Bearer.html#Bearer.add_packet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Bearer.Bearer.add_packet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a packet to the RLC queue. If the packet&#8217;s size is larger than
+the remaining available space in the queue, the packet is discarded
+and it&#8217;s size is recorded as a loss.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Bearer.Bearer.arp">
+<code class="descname">arp</code><a class="headerlink" href="#qppsim.Bearer.Bearer.arp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the ARP</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Bearer.Bearer.bid">
+<code class="descname">bid</code><a class="headerlink" href="#qppsim.Bearer.Bearer.bid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Bearer ID</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Bearer.Bearer.gbr">
+<code class="descname">gbr</code><a class="headerlink" href="#qppsim.Bearer.Bearer.gbr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the GBR</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Bearer.Bearer.get_metrics">
+<code class="descname">get_metrics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Bearer.html#Bearer.get_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Bearer.Bearer.get_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the QoS metrics stored by this Bearer. Loss and Throughput are
+reported as stored (SortedDicts where the key is the time, and the value
+is the bytes sent / lost), while delays are computed on each call.</p>
+<p>The metrics are returned as a tuple of SortedDicts.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Bearer.Bearer.mbr">
+<code class="descname">mbr</code><a class="headerlink" href="#qppsim.Bearer.Bearer.mbr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the MBR</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Bearer.Bearer.mcs">
+<code class="descname">mcs</code><a class="headerlink" href="#qppsim.Bearer.Bearer.mcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the UE MCS</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Bearer.Bearer.modify_qos">
+<code class="descname">modify_qos</code><span class="sig-paren">(</span><em>new_qci</em>, <em>new_gbr</em>, <em>new_mbr</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Bearer.html#Bearer.modify_qos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Bearer.Bearer.modify_qos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modify the QoS parameters of the bearer: QCI, GBR, and/or MBR.
+Trace the modification in the bearer trace. Return a boolean indicating
+if the modification succeeded.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Bearer.Bearer.pci">
+<code class="descname">pci</code><a class="headerlink" href="#qppsim.Bearer.Bearer.pci" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the PCI</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Bearer.Bearer.pending_size">
+<code class="descname">pending_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Bearer.html#Bearer.pending_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Bearer.Bearer.pending_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the total size of the queue that still needs to be allocated RBs.
+This does not include the Bytes currently waiting for retransmission.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Bearer.Bearer.port">
+<code class="descname">port</code><a class="headerlink" href="#qppsim.Bearer.Bearer.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Port used by the application</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Bearer.Bearer.pvi">
+<code class="descname">pvi</code><a class="headerlink" href="#qppsim.Bearer.Bearer.pvi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the PVI</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Bearer.Bearer.qci">
+<code class="descname">qci</code><a class="headerlink" href="#qppsim.Bearer.Bearer.qci" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the QCI</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Bearer.Bearer.queue_size">
+<code class="descname">queue_size</code><a class="headerlink" href="#qppsim.Bearer.Bearer.queue_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the RLC queue size, in bytes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Bearer.Bearer.queue_used">
+<code class="descname">queue_used</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Bearer.html#Bearer.queue_used"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Bearer.Bearer.queue_used" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the amount of Bytes of the RLC queue currently in use</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Bearer.Bearer.queue_used_per_packet">
+<code class="descname">queue_used_per_packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Bearer.html#Bearer.queue_used_per_packet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Bearer.Bearer.queue_used_per_packet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list with the size still in queue of each packet in the queue.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Bearer.Bearer.rtx">
+<code class="descname">rtx</code><span class="sig-paren">(</span><em>amount</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Bearer.html#Bearer.rtx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Bearer.Bearer.rtx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Successfully retransmit a certain amount of Bytes. This method explores
+the queue and marks up to the specified amount of bytes as successfully
+transmitted, and records the throughput for this time period. When this
+operation &#8216;completes&#8217; the transmission of a packet we schedule the
+reception by the application after TX_DELAY milliseconds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Bearer.Bearer.teardown">
+<code class="descname">teardown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Bearer.html#Bearer.teardown"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Bearer.Bearer.teardown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Teardown this bearer. This operation shall fail if this is a default bearer.
+Redirect the application linked to this bearer to the UE&#8217;s default bearer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Bearer.Bearer.tx">
+<code class="descname">tx</code><span class="sig-paren">(</span><em>amount</em>, <em>rtx=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Bearer.html#Bearer.tx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Bearer.Bearer.tx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transmit a certain amount of Bytes from the RLC queue. If the &#8216;rtx&#8217; flag
+is set to &#8216;True&#8217;, the Bytes are considered to have been transmitted with
+errors, and therefore they must be set aside awaiting retransmission. If
+the flag is set to &#8216;False&#8217;, then the Bytes are successfully transmitted.
+In this case we need to record the Bytes as the bearer throughput for
+this unit of time, and also check if a packet is fully transmitted, to
+report it to the application as &#8216;received&#8217; after TX_DELAY milliseconds.
+and record the size in the throughput statistic.</p>
+<p>We need to consider that the amount of Bytes to transmit may be larger
+than the pending size of a single packet, and if this happens, we need
+to continue transmitting bytes of the next packet, as needed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Bearer.Bearer.ue">
+<code class="descname">ue</code><a class="headerlink" href="#qppsim.Bearer.Bearer.ue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the UE that established this bearer</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Bearer.QosTuple">
+<code class="descclassname">qppsim.Bearer.</code><code class="descname">QosTuple</code><a class="headerlink" href="#qppsim.Bearer.QosTuple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Named tuple to allow for easier access to the content of the QoS fields</p>
+<p>alias of <code class="xref py py-class docutils literal"><span class="pre">QoSTuple</span></code></p>
+</dd></dl>
+
+<dl class="data">
+<dt id="qppsim.Bearer.TX_DELAY">
+<code class="descclassname">qppsim.Bearer.</code><code class="descname">TX_DELAY</code><em class="property"> = &lt;qppsim.Time.Time object&gt;</em><a class="headerlink" href="#qppsim.Bearer.TX_DELAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant with the TX delay to add to a packet reception once the last byte has
+been successfully scheduled</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="qppsim.BearerList.html" class="btn btn-neutral float-right" title="qppsim.BearerList module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="qppsim.Application.html" class="btn btn-neutral" title="qppsim.Application module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

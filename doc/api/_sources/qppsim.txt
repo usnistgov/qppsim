@@ -1,0 +1,46 @@
+qppsim package
+==============
+
+Subpackages
+-----------
+
+.. toctree::
+
+    qppsim.accesscontrol
+    qppsim.preemption
+    qppsim.prioritypolicy
+    qppsim.qosmonitor
+    qppsim.scheduler
+
+Submodules
+----------
+
+.. toctree::
+
+   qppsim.Amc
+   qppsim.AppProfile
+   qppsim.Application
+   qppsim.Bearer
+   qppsim.BearerList
+   qppsim.Des
+   qppsim.Event
+   qppsim.Packet
+   qppsim.Time
+   qppsim.TraceWriter
+   qppsim.Ue
+   qppsim.XmlScenarioParser
+
+Module Contents
+---------------
+
+.. automodule:: qppsim
+    :members:
+    :undoc-members:
+    :show-inheritance:
+Class Diagram
+-------------
+
+.. inheritance-diagram:: qppsim.Amc qppsim.AppProfile qppsim.Application qppsim.Bearer qppsim.BearerList qppsim.Des qppsim.Event qppsim.Packet qppsim.Time qppsim.TraceWriter qppsim.Ue qppsim.XmlScenarioParser 
+    :parts: 0
+
+

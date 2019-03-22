@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.Application module &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qppsim.Bearer module" href="qppsim.Bearer.html" />
+    <link rel="prev" title="qppsim.AppProfile module" href="qppsim.AppProfile.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="qppsim.html">qppsim package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="qppsim.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Amc.html">qppsim.Amc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.AppProfile.html">qppsim.AppProfile module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">qppsim.Application module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-qppsim.Application">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Bearer.html">qppsim.Bearer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.BearerList.html">qppsim.BearerList module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Des.html">qppsim.Des module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Event.html">qppsim.Event module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Packet.html">qppsim.Packet module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Time.html">qppsim.Time module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.TraceWriter.html">qppsim.TraceWriter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Ue.html">qppsim.Ue module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.XmlScenarioParser.html">qppsim.XmlScenarioParser module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="qppsim.html">qppsim package</a> &raquo;</li>
+        
+      <li>qppsim.Application module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/qppsim.Application.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="qppsim-application-module">
+<h1>qppsim.Application module<a class="headerlink" href="#qppsim-application-module" title="Permalink to this headline">¶</a></h1>
+<img src="_images/inheritance-9f18f7012d2a8dd997128f3e0de184b27e08f5df.png" alt="Inheritance diagram of qppsim.Application" usemap="#inheritance9729b4033a" class="inheritance"/>
+<map id="inheritance9729b4033a" name="inheritance9729b4033a">
+<area shape="rect" id="node1" href="#qppsim.Application.Application" target="_top" title="Class that defines an Application. An application is defined by the data" alt="" coords="32,55,249,80"/>
+<area shape="rect" id="node2" href="#qppsim.Application.NoBearerException" target="_top" title="Exception to be raised when an Application attempts to send a packet and" alt="" coords="5,5,276,31"/>
+</map>
+<div class="section" id="module-qppsim.Application">
+<span id="documentation"></span><h2>Documentation<a class="headerlink" href="#module-qppsim.Application" title="Permalink to this headline">¶</a></h2>
+<p>Module that provides the implementation of an Application, and an exception to
+raise when the Application attempts to send a packet and has no bearer
+associated.</p>
+<dl class="class">
+<dt id="qppsim.Application.Application">
+<em class="property">class </em><code class="descclassname">qppsim.Application.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>name</em>, <em>packet_size</em>, <em>packet_interval</em>, <em>packets_session</em>, <em>session_interval</em>, <em>start_time</em>, <em>stop_time</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Application.html#Application"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Application.Application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class that defines an Application. An application is defined by the data
+rate (composed of the packet size, inter-packet interval, number of packets
+per session, inter-session interval (all of them defined by tuples with the
+name of a distribution in numpy.random, and a list with parameters to such
+distribution)), the start and stop times, and a name.</p>
+<p>The class also contains a pointer to the Bearer where the packets generated
+are to be queued, and through it, to the UE where the application is
+installed.</p>
+<p>The class provides methods for starting and stopping the packet generation,
+sending and receiving packets, and change the bearer associated with this
+application.</p>
+<dl class="attribute">
+<dt id="qppsim.Application.Application.bearer">
+<code class="descname">bearer</code><a class="headerlink" href="#qppsim.Application.Application.bearer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the bearer where this application queues the packets generated</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Application.Application.change_bearer">
+<code class="descname">change_bearer</code><span class="sig-paren">(</span><em>new_bearer</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Application.html#Application.change_bearer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Application.Application.change_bearer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the bearer associated with this application. This may happen
+due to pre-emption, or due to new bearer activation during the
+simulation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Application.Application.generate_packet">
+<code class="descname">generate_packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Application.html#Application.generate_packet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Application.Application.generate_packet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a packet, and schedule the event for the next packet generation.
+On the computation of the time for the next event, we need to consider
+if we are the last packet in a session, to adjust the interval until
+the next event.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Application.Application.name">
+<code class="descname">name</code><a class="headerlink" href="#qppsim.Application.Application.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the name of the Application</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Application.Application.packet_interval">
+<code class="descname">packet_interval</code><a class="headerlink" href="#qppsim.Application.Application.packet_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the inter-packet interval tuple</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Application.Application.packet_size">
+<code class="descname">packet_size</code><a class="headerlink" href="#qppsim.Application.Application.packet_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the packet size tuple</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Application.Application.packets_session">
+<code class="descname">packets_session</code><a class="headerlink" href="#qppsim.Application.Application.packets_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the packets per session tuple</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Application.Application.receive_packet">
+<code class="descname">receive_packet</code><span class="sig-paren">(</span><em>packet</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Application.html#Application.receive_packet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Application.Application.receive_packet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive a packet. The only action performed is removing the network overhead
+and tracing the event in the application traffic trace.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Application.Application.session_interval">
+<code class="descname">session_interval</code><a class="headerlink" href="#qppsim.Application.Application.session_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the inter-session interval tuple</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Application.Application.start_app">
+<code class="descname">start_app</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Application.html#Application.start_app"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Application.Application.start_app" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start generating packets</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Application.Application.start_time">
+<code class="descname">start_time</code><a class="headerlink" href="#qppsim.Application.Application.start_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the start time</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Application.Application.stop_app">
+<code class="descname">stop_app</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Application.html#Application.stop_app"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Application.Application.stop_app" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the application. This method is called when stopping the
+application &#8216;externally&#8217;. This also deactivates the associated bearer
+unless it is a default bearer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Application.Application.stop_time">
+<code class="descname">stop_time</code><a class="headerlink" href="#qppsim.Application.Application.stop_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the stop time</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="qppsim.Application.NETWORK_OVERHEAD">
+<code class="descclassname">qppsim.Application.</code><code class="descname">NETWORK_OVERHEAD</code><em class="property"> = 30</em><a class="headerlink" href="#qppsim.Application.NETWORK_OVERHEAD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Network overhead in bytes to be used when tracing the network-level packet size.
+This value is taken from the ns-3 simulations, as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li>8 Bytes in UDP header</li>
+<li>20 Bytes in IPv4 header</li>
+<li>2 Bytes in PDCP header</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="exception">
+<dt id="qppsim.Application.NoBearerException">
+<em class="property">exception </em><code class="descclassname">qppsim.Application.</code><code class="descname">NoBearerException</code><a class="reference internal" href="_modules/qppsim/Application.html#NoBearerException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Application.NoBearerException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Exception to be raised when an Application attempts to send a packet and
+there is no bearer associated with it.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="qppsim.Bearer.html" class="btn btn-neutral float-right" title="qppsim.Bearer module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="qppsim.AppProfile.html" class="btn btn-neutral" title="qppsim.AppProfile module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

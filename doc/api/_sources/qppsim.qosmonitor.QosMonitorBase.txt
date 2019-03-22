@@ -1,0 +1,14 @@
+qppsim.qosmonitor.QosMonitorBase module
+=======================================
+
+.. inheritance-diagram:: qppsim.qosmonitor.QosMonitorBase
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.qosmonitor.QosMonitorBase
+    :members:
+    :undoc-members:
+    :show-inheritance:

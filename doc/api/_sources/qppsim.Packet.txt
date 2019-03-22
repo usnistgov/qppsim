@@ -1,0 +1,14 @@
+qppsim.Packet module
+====================
+
+.. inheritance-diagram:: qppsim.Packet
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.Packet
+    :members:
+    :undoc-members:
+    :show-inheritance:

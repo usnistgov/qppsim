@@ -1,0 +1,14 @@
+qppsim.preemption.PreemptionBase module
+=======================================
+
+.. inheritance-diagram:: qppsim.preemption.PreemptionBase
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.preemption.PreemptionBase
+    :members:
+    :undoc-members:
+    :show-inheritance:

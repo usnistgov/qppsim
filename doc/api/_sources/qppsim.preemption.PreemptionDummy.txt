@@ -1,0 +1,14 @@
+qppsim.preemption.PreemptionDummy module
+========================================
+
+.. inheritance-diagram:: qppsim.preemption.PreemptionDummy
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.preemption.PreemptionDummy
+    :members:
+    :undoc-members:
+    :show-inheritance:

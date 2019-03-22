@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.BearerList module &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qppsim.Des module" href="qppsim.Des.html" />
+    <link rel="prev" title="qppsim.Bearer module" href="qppsim.Bearer.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="qppsim.html">qppsim package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="qppsim.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Amc.html">qppsim.Amc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.AppProfile.html">qppsim.AppProfile module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Application.html">qppsim.Application module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Bearer.html">qppsim.Bearer module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">qppsim.BearerList module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-qppsim.BearerList">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Des.html">qppsim.Des module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Event.html">qppsim.Event module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Packet.html">qppsim.Packet module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Time.html">qppsim.Time module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.TraceWriter.html">qppsim.TraceWriter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Ue.html">qppsim.Ue module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.XmlScenarioParser.html">qppsim.XmlScenarioParser module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="qppsim.html">qppsim package</a> &raquo;</li>
+        
+      <li>qppsim.BearerList module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/qppsim.BearerList.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="qppsim-bearerlist-module">
+<h1>qppsim.BearerList module<a class="headerlink" href="#qppsim-bearerlist-module" title="Permalink to this headline">¶</a></h1>
+<img src="_images/inheritance-05f6eca806ba78cf4a409509d025a84c681de08e.png" alt="Inheritance diagram of qppsim.BearerList" usemap="#inheritance8b395ab436" class="inheritance"/>
+<map id="inheritance8b395ab436" name="inheritance8b395ab436">
+<area shape="rect" id="node1" href="#qppsim.BearerList.BearerList" target="_top" title="Class that represents the list with all the bearers active in the simulation." alt="" coords="5,5,212,31"/>
+</map>
+<div class="section" id="module-qppsim.BearerList">
+<span id="documentation"></span><h2>Documentation<a class="headerlink" href="#module-qppsim.BearerList" title="Permalink to this headline">¶</a></h2>
+<p>Module that provides the model for the List of all bearers in the simulation.
+The class is static, and the module function &#8216;get_bearer_list&#8217; provides access
+to the instance.</p>
+<dl class="class">
+<dt id="qppsim.BearerList.BearerList">
+<em class="property">class </em><code class="descclassname">qppsim.BearerList.</code><code class="descname">BearerList</code><a class="reference internal" href="_modules/qppsim/BearerList.html#BearerList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.BearerList.BearerList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class that represents the list with all the bearers active in the simulation.
+Bearers are created in this class, and returned to the requester of the
+bearer.</p>
+<p>Methods are provided for adding a default bearer, adding a dedicated bearer,
+and deactivating an active bearer.</p>
+<dl class="method">
+<dt id="qppsim.BearerList.BearerList.add_dedicated_bearer">
+<code class="descname">add_dedicated_bearer</code><span class="sig-paren">(</span><em>ue</em>, <em>queue_size</em>, <em>qci</em>, <em>gbr</em>, <em>mbr</em>, <em>pci</em>, <em>pvi</em>, <em>arp</em>, <em>port</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/BearerList.html#BearerList.add_dedicated_bearer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.BearerList.BearerList.add_dedicated_bearer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a dedicated bearer for the UE, with the QoS parameters received
+in the call, and the RLC queue size specified. Add the bearer to the
+bearer list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.BearerList.BearerList.add_default_bearer">
+<code class="descname">add_default_bearer</code><span class="sig-paren">(</span><em>ue</em>, <em>queue_size</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/BearerList.html#BearerList.add_default_bearer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.BearerList.BearerList.add_default_bearer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a default bearer for the UE, with the QoS parameters set as
+default for the Simulation (in the Des), and the RLC queue size
+specified. Add the bearer to the bearer list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.BearerList.BearerList.remove_dedicated_bearer">
+<code class="descname">remove_dedicated_bearer</code><span class="sig-paren">(</span><em>ue</em>, <em>bid</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/BearerList.html#BearerList.remove_dedicated_bearer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.BearerList.BearerList.remove_dedicated_bearer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a dedicated bearer from the list.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="qppsim.BearerList.get_bearer_list">
+<code class="descclassname">qppsim.BearerList.</code><code class="descname">get_bearer_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/BearerList.html#get_bearer_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.BearerList.get_bearer_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a reference to the instance of the BearerList class. If there is none,
+a new instance is created.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="qppsim.BearerList.instance">
+<code class="descclassname">qppsim.BearerList.</code><code class="descname">instance</code><em class="property"> = None</em><a class="headerlink" href="#qppsim.BearerList.instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference to the active instance of this class</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="qppsim.Des.html" class="btn btn-neutral float-right" title="qppsim.Des module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="qppsim.Bearer.html" class="btn btn-neutral" title="qppsim.Bearer module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

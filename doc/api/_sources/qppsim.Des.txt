@@ -1,0 +1,14 @@
+qppsim.Des module
+=================
+
+.. inheritance-diagram:: qppsim.Des
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.Des
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,14 @@
+qppsim.qosmonitor.QosMonitorDummy module
+========================================
+
+.. inheritance-diagram:: qppsim.qosmonitor.QosMonitorDummy
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.qosmonitor.QosMonitorDummy
+    :members:
+    :undoc-members:
+    :show-inheritance:

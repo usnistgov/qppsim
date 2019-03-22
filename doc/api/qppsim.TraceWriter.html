@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.TraceWriter module &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qppsim.Ue module" href="qppsim.Ue.html" />
+    <link rel="prev" title="qppsim.Time module" href="qppsim.Time.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="qppsim.html">qppsim package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="qppsim.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Amc.html">qppsim.Amc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.AppProfile.html">qppsim.AppProfile module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Application.html">qppsim.Application module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Bearer.html">qppsim.Bearer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.BearerList.html">qppsim.BearerList module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Des.html">qppsim.Des module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Event.html">qppsim.Event module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Packet.html">qppsim.Packet module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Time.html">qppsim.Time module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">qppsim.TraceWriter module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-qppsim.TraceWriter">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Ue.html">qppsim.Ue module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.XmlScenarioParser.html">qppsim.XmlScenarioParser module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="qppsim.html">qppsim package</a> &raquo;</li>
+        
+      <li>qppsim.TraceWriter module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/qppsim.TraceWriter.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="qppsim-tracewriter-module">
+<h1>qppsim.TraceWriter module<a class="headerlink" href="#qppsim-tracewriter-module" title="Permalink to this headline">¶</a></h1>
+<img src="_images/inheritance-8a21400763d68386dbe168ed1bb4eb62accb9c44.png" alt="Inheritance diagram of qppsim.TraceWriter" usemap="#inheritancecfe9e1e822" class="inheritance"/>
+<map id="inheritancecfe9e1e822" name="inheritancecfe9e1e822">
+<area shape="rect" id="node1" href="#qppsim.TraceWriter.TraceWriter" target="_top" title="Class that provides all the tracing services for the simulation: Application" alt="" coords="5,5,220,31"/>
+</map>
+<div class="section" id="module-qppsim.TraceWriter">
+<span id="documentation"></span><h2>Documentation<a class="headerlink" href="#module-qppsim.TraceWriter" title="Permalink to this headline">¶</a></h2>
+<p>Module with the TraceWriter, a class to compile all the tracing operations in
+in a single method. It also defines the Network Overhead to be used in the
+application traffic traces when reporting the network-level packet size.</p>
+<dl class="data">
+<dt id="qppsim.TraceWriter.NETWORK_OVERHEAD">
+<code class="descclassname">qppsim.TraceWriter.</code><code class="descname">NETWORK_OVERHEAD</code><em class="property"> = 30</em><a class="headerlink" href="#qppsim.TraceWriter.NETWORK_OVERHEAD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Network overhead in bytes to be used when tracing the network-level packet size.
+This value is taken from the ns-3 simulations, as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li>8 Bytes in UDP header</li>
+<li>20 Bytes in IPv4 header</li>
+<li>2 Bytes in PDCP header</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="class">
+<dt id="qppsim.TraceWriter.TraceWriter">
+<em class="property">class </em><code class="descclassname">qppsim.TraceWriter.</code><code class="descname">TraceWriter</code><span class="sig-paren">(</span><em>output_directory</em>, <em>topology_filename</em>, <em>app_traffic_filename</em>, <em>bearer_filename</em>, <em>arp_filename</em>, <em>qos_filename</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class that provides all the tracing services for the simulation: Application
+Traffic, Bearer, ARP, QoS, and Topology.</p>
+<dl class="method">
+<dt id="qppsim.TraceWriter.TraceWriter.close_traces">
+<code class="descname">close_traces</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter.close_traces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter.close_traces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the open file handles for the traces</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.TraceWriter.TraceWriter.init_traces">
+<code class="descname">init_traces</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter.init_traces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter.init_traces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the traces, by opening for writing the files (unless the trace
+filename is &#8216;None&#8217;), and storing the corresponding file handles.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.TraceWriter.TraceWriter.trace_app_traffic">
+<code class="descname">trace_app_traffic</code><span class="sig-paren">(</span><em>time</em>, <em>app_name</em>, <em>size</em>, <em>pid</em>, <em>action='TX'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter.trace_app_traffic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter.trace_app_traffic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trace an entry in the application traffic trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.TraceWriter.TraceWriter.trace_arp_activation_check">
+<code class="descname">trace_arp_activation_check</code><span class="sig-paren">(</span><em>time</em>, <em>imsi</em>, <em>req</em>, <em>used</em>, <em>qci</em>, <em>rate</em>, <em>arp</em>, <em>pvi</em>, <em>pci</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter.trace_arp_activation_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter.trace_arp_activation_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trace an ARP Activation Check entry in the ARP trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.TraceWriter.TraceWriter.trace_arp_activation_result">
+<code class="descname">trace_arp_activation_result</code><span class="sig-paren">(</span><em>time</em>, <em>imsi</em>, <em>result</em>, <em>req</em>, <em>used</em>, <em>qci</em>, <em>rate</em>, <em>arp</em>, <em>pvi</em>, <em>pci</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter.trace_arp_activation_result"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter.trace_arp_activation_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trace an ARP Activation Result entry in the ARP trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.TraceWriter.TraceWriter.trace_arp_deactivation">
+<code class="descname">trace_arp_deactivation</code><span class="sig-paren">(</span><em>time</em>, <em>imsi</em>, <em>bid</em>, <em>qci</em>, <em>rate</em>, <em>arp</em>, <em>pvi</em>, <em>pci</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter.trace_arp_deactivation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter.trace_arp_deactivation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trace an ARP Deactivation entry in the ARP trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.TraceWriter.TraceWriter.trace_arp_modification_check">
+<code class="descname">trace_arp_modification_check</code><span class="sig-paren">(</span><em>time</em>, <em>imsi</em>, <em>old_req</em>, <em>new_req</em>, <em>used</em>, <em>old_qci</em>, <em>old_rate</em>, <em>new_qci</em>, <em>new_rate</em>, <em>arp</em>, <em>pvi</em>, <em>pci</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter.trace_arp_modification_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter.trace_arp_modification_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trace an ARP Modification Check entry in the ARP trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.TraceWriter.TraceWriter.trace_arp_modification_result">
+<code class="descname">trace_arp_modification_result</code><span class="sig-paren">(</span><em>time</em>, <em>imsi</em>, <em>result</em>, <em>old_req</em>, <em>new_req</em>, <em>used</em>, <em>new_qci</em>, <em>new_rate</em>, <em>arp</em>, <em>pvi</em>, <em>pci</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter.trace_arp_modification_result"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter.trace_arp_modification_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trace an ARP Modification Result entry in the ARP trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.TraceWriter.TraceWriter.trace_arp_preemption">
+<code class="descname">trace_arp_preemption</code><span class="sig-paren">(</span><em>time</em>, <em>imsi</em>, <em>bid</em>, <em>rbs</em>, <em>qci</em>, <em>rate</em>, <em>arp</em>, <em>pvi</em>, <em>pci</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter.trace_arp_preemption"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter.trace_arp_preemption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trace an ARP Pre-emption entry in the ARP trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.TraceWriter.TraceWriter.trace_bearer">
+<code class="descname">trace_bearer</code><span class="sig-paren">(</span><em>time</em>, <em>action</em>, <em>imsi</em>, <em>bid</em>, <em>qci</em>, <em>port</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter.trace_bearer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter.trace_bearer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trace an entry in the bearer trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.TraceWriter.TraceWriter.trace_bearer_modification">
+<code class="descname">trace_bearer_modification</code><span class="sig-paren">(</span><em>time</em>, <em>imsi</em>, <em>bid</em>, <em>old_qci</em>, <em>new_qci</em>, <em>port</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter.trace_bearer_modification"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter.trace_bearer_modification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trace a modification entry in the bearer trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.TraceWriter.TraceWriter.trace_qos">
+<code class="descname">trace_qos</code><span class="sig-paren">(</span><em>time</em>, <em>imsi</em>, <em>bid</em>, <em>qci</em>, <em>gbr</em>, <em>rate</em>, <em>loss</em>, <em>losspct</em>, <em>delay</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter.trace_qos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter.trace_qos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trace an entry in the QoS trace</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.TraceWriter.TraceWriter.trace_topology">
+<code class="descname">trace_topology</code><span class="sig-paren">(</span><em>app_name</em>, <em>start_time</em>, <em>stop_time</em>, <em>qci</em>, <em>gbr</em>, <em>mbr</em>, <em>port</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/TraceWriter.html#TraceWriter.trace_topology"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.TraceWriter.TraceWriter.trace_topology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trace an entry in the topology trace</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="qppsim.Ue.html" class="btn btn-neutral float-right" title="qppsim.Ue module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="qppsim.Time.html" class="btn btn-neutral" title="qppsim.Time module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

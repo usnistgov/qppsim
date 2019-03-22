@@ -1,0 +1,14 @@
+qppsim.accesscontrol.AccessControlBase module
+=============================================
+
+.. inheritance-diagram:: qppsim.accesscontrol.AccessControlBase
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.accesscontrol.AccessControlBase
+    :members:
+    :undoc-members:
+    :show-inheritance:

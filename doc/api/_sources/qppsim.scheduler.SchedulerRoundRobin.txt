@@ -1,0 +1,14 @@
+qppsim.scheduler.SchedulerRoundRobin module
+===========================================
+
+.. inheritance-diagram:: qppsim.scheduler.SchedulerRoundRobin
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.scheduler.SchedulerRoundRobin
+    :members:
+    :undoc-members:
+    :show-inheritance:

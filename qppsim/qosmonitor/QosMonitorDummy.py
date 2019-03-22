@@ -1,0 +1,76 @@
+# -*- coding: utf-8 -*-
+#
+# NIST-developed software is provided by NIST as a public service. You may
+# use, copy and distribute copies of the software in any medium, provided that
+# you keep intact this entire notice. You may improve, modify and create
+# derivative works of the software or any portion of the software, and you may
+# copy and distribute such modifications or works. Modified works should carry
+# a notice stating that you changed the software and should note the date and
+# nature of any such change. Please explicitly acknowledge the National
+# Institute of Standards and Technology as the source of the software.
+#
+# NIST-developed software is expressly provided "AS IS." NIST MAKES NO
+# WARRANTY OF ANY KIND, EXPRESS, IMPLIED, IN FACT OR ARISING BY OPERATION OF
+# LAW, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTY OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT AND DATA ACCURACY. NIST
+# NEITHER REPRESENTS NOR WARRANTS THAT THE OPERATION OF THE SOFTWARE WILL BE
+# UNINTERRUPTED OR ERROR-FREE, OR THAT ANY DEFECTS WILL BE CORRECTED. NIST
+# DOES NOT WARRANT OR MAKE ANY REPRESENTATIONS REGARDING THE USE OF THE
+# SOFTWARE OR THE RESULTS THEREOF, INCLUDING BUT NOT LIMITED TO THE
+# CORRECTNESS, ACCURACY, RELIABILITY, OR USEFULNESS OF THE SOFTWARE.
+#
+# You are solely responsible for determining the appropriateness of using and
+# distributing the software and you assume all risks associated with its use,
+# including but not limited to the risks and costs of program errors,
+# compliance with applicable laws, damage to or loss of data, programs or
+# equipment, and the unavailability or interruption of operation. This
+# software is not intended to be used in any situation where a failure could
+# cause risk of injury or damage to property. The software developed by NIST
+# employees is not subject to copyright protection within the United States.
+
+"""
+Module with a dummy QoS Monitor. This monitor only reports 'NaN' and '0' as the
+QoS values for every bearer.
+"""
+
+import qppsim.BearerList
+import qppsim.Time
+import qppsim.qosmonitor.QosMonitorBase
+
+
+class QosMonitorDummy(qppsim.qosmonitor.QosMonitorBase.QosMonitorBase):
+    """
+    Dummy QoS Monitor. This monitor only reports 'NaN' and '0' as the QoS values
+    for every bearer.
+    """
+    def get_qos(self):
+        """
+        Report dummy QoS values composed of 'NaN' and '0' for every active bearer.
+
+        QosTracing objects are created, and if configured, they are written
+        to the QoS trace.
+        """
+        qos_stats = {}
+        qos_stats_trace = {}
+        bearer_list = qppsim.BearerList.get_bearer_list().bearers
+        for ue in bearer_list:
+            if ue not in qos_stats:
+                qos_stats[ue] = {}
+                qos_stats_trace[ue] = {}
+            for bid in bearer_list[ue]:
+                qos_stats[ue][bid] = (float('nan'), 0, 0, float('nan'))
+                qos_trace = qppsim.qosmonitor.QosMonitorBase.TraceableQos(
+                    float('nan'), float('nan'), float('nan'), float('nan'))
+
+                # Delay is in time, so handle that with fields filled in with time values
+                nan_milliseconds = qppsim.Time.Time(float('nan'))
+                qos_trace_delay = qppsim.qosmonitor.QosMonitorBase.TraceableQos(
+                    nan_milliseconds, nan_milliseconds, nan_milliseconds, nan_milliseconds
+                )
+
+                qos_stats_trace[ue][bid] = (bearer_list[ue][bid].qci,
+                                            bearer_list[ue][bid].gbr, qos_trace,
+                                            qos_trace, qos_trace, qos_trace_delay)
+
+        self.do_trace_qos_stats(qos_stats_trace)
+        return qos_stats

@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.Des module &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qppsim.Event module" href="qppsim.Event.html" />
+    <link rel="prev" title="qppsim.BearerList module" href="qppsim.BearerList.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="qppsim.html">qppsim package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="qppsim.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Amc.html">qppsim.Amc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.AppProfile.html">qppsim.AppProfile module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Application.html">qppsim.Application module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Bearer.html">qppsim.Bearer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.BearerList.html">qppsim.BearerList module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">qppsim.Des module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-qppsim.Des">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Event.html">qppsim.Event module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Packet.html">qppsim.Packet module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Time.html">qppsim.Time module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.TraceWriter.html">qppsim.TraceWriter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Ue.html">qppsim.Ue module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.XmlScenarioParser.html">qppsim.XmlScenarioParser module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="qppsim.html">qppsim package</a> &raquo;</li>
+        
+      <li>qppsim.Des module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/qppsim.Des.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="qppsim-des-module">
+<h1>qppsim.Des module<a class="headerlink" href="#qppsim-des-module" title="Permalink to this headline">¶</a></h1>
+<img src="_images/inheritance-4bce07d8dd7e8ebc9fea1c8a639f06e43912087d.png" alt="Inheritance diagram of qppsim.Des" usemap="#inheritance23025815fa" class="inheritance"/>
+<map id="inheritance23025815fa" name="inheritance23025815fa">
+<area shape="rect" id="node1" href="#qppsim.Des.Des" target="_top" title="Class that represents the Discrete Event Simulation engine. It stores" alt="" coords="5,5,132,31"/>
+</map>
+<div class="section" id="module-qppsim.Des">
+<span id="documentation"></span><h2>Documentation<a class="headerlink" href="#module-qppsim.Des" title="Permalink to this headline">¶</a></h2>
+<p>Module with the DES code. The Des class is static, and the &#8216;get_des&#8217; method
+provides access to the active instance.</p>
+<dl class="class">
+<dt id="qppsim.Des.Des">
+<em class="property">class </em><code class="descclassname">qppsim.Des.</code><code class="descname">Des</code><span class="sig-paren">(</span><em>num_rbs=50</em>, <em>start_packet_id=0</em>, <em>default_qci=9</em>, <em>default_arp=11</em>, <em>default_mbr=1099511627776</em>, <em>rtx_threshold=0.1</em>, <em>bearer_stats_window_size=&lt;qppsim.Time.Time object&gt;</em>, <em>seed=1</em>, <em>stop_time=&lt;qppsim.Time.Time object&gt;</em>, <em>priority_policy=None</em>, <em>access_control_policy=None</em>, <em>preemption_policy=None</em>, <em>qos_monitor=None</em>, <em>scheduler=None</em>, <em>output_dir='.'</em>, <em>topology_filename='topologyTrace.txt'</em>, <em>app_traffic_filename='trafficTrace.txt'</em>, <em>bearer_filename='bearerTrace.txt'</em>, <em>arp_filename='arpTrace.txt'</em>, <em>qos_filename='qosTrace.txt'</em>, <em>trace_qos=False</em>, <em>preempt_qos=False</em>, <em>qos_monitor_interval=&lt;qppsim.Time.Time object&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Des.html#Des"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Des.Des" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class that represents the Discrete Event Simulation engine. It stores
+the default configuration for default bearers, trace filenames, seed,
+global packet ID counter, current simulation time, Priority, Access Control,
+Pre-emption, Scheduler and QoS Monitor policies, TX error probability,
+and the reference to the TraceWriter.</p>
+<p>Methods are provided for getting random values from random distributions,
+computing if a transmission succeeded, get the current simulation time,
+start and stop the simulation, add events to the DES, and activate and
+deactivate bearers and specific times.</p>
+<dl class="attribute">
+<dt id="qppsim.Des.Des.access_control_policy">
+<code class="descname">access_control_policy</code><a class="headerlink" href="#qppsim.Des.Des.access_control_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the reference to the active Access Control module.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Des.Des.activate_bearer_at_time">
+<code class="descname">activate_bearer_at_time</code><span class="sig-paren">(</span><em>time</em>, <em>app</em>, <em>qci</em>, <em>gbr</em>, <em>mbr</em>, <em>pci</em>, <em>pvi</em>, <em>arp</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Des.html#Des.activate_bearer_at_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Des.Des.activate_bearer_at_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an event to activate a bearer for a given application at a given time.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Des.Des.add_event">
+<code class="descname">add_event</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Des.html#Des.add_event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Des.Des.add_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an event to the DES event queue.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.app_traffic_filename">
+<code class="descname">app_traffic_filename</code><a class="headerlink" href="#qppsim.Des.Des.app_traffic_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the filename for the application traffic trace.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.arp_filename">
+<code class="descname">arp_filename</code><a class="headerlink" href="#qppsim.Des.Des.arp_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the filename for the ARP trace.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.bearer_filename">
+<code class="descname">bearer_filename</code><a class="headerlink" href="#qppsim.Des.Des.bearer_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the filename for the bearer trace.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.bearer_stats_window_size">
+<code class="descname">bearer_stats_window_size</code><a class="headerlink" href="#qppsim.Des.Des.bearer_stats_window_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the length of time for which the bearers will store QoS metrics.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Des.Des.deactivate_bearer_at_time">
+<code class="descname">deactivate_bearer_at_time</code><span class="sig-paren">(</span><em>time</em>, <em>ue</em>, <em>bid</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Des.html#Des.deactivate_bearer_at_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Des.Des.deactivate_bearer_at_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an event to deactivate a bearer at a given time.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.default_arp">
+<code class="descname">default_arp</code><a class="headerlink" href="#qppsim.Des.Des.default_arp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the ARP for default bearers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.default_mbr">
+<code class="descname">default_mbr</code><a class="headerlink" href="#qppsim.Des.Des.default_mbr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the MBR for default bearers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.default_qci">
+<code class="descname">default_qci</code><a class="headerlink" href="#qppsim.Des.Des.default_qci" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the QCI for default bearers.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Des.Des.do_activate_bearer">
+<code class="descname">do_activate_bearer</code><span class="sig-paren">(</span><em>app</em>, <em>qci</em>, <em>gbr</em>, <em>mbr</em>, <em>pci</em>, <em>pvi</em>, <em>arp</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Des.html#Des.do_activate_bearer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Des.Des.do_activate_bearer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Activate a bearer for a given application at a given time.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Des.Des.do_deactivate_bearer">
+<code class="descname">do_deactivate_bearer</code><span class="sig-paren">(</span><em>ue</em>, <em>bid</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Des.html#Des.do_deactivate_bearer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Des.Des.do_deactivate_bearer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deactivate a bearer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Des.Des.end_simulation">
+<code class="descname">end_simulation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Des.html#Des.end_simulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Des.Des.end_simulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>End the simulation, and close the trace filenames.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Des.Des.get_packet_id">
+<code class="descname">get_packet_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Des.html#Des.get_packet_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Des.Des.get_packet_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the next available Packet ID, and increase the counter.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Des.Des.get_random_value">
+<code class="descname">get_random_value</code><span class="sig-paren">(</span><em>distribution_name</em>, <em>args</em>, <em>time=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Des.html#Des.get_random_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Des.Des.get_random_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a random value from the specified random distribution, with the
+provided parameters. If &#8216;time&#8217; is True, the requested random value is
+supposed to be a time, so we need to multiply it by 1000 to convert it
+to milliseconds (as the user specifies the random parameters for
+timings in seconds, for convenience).</p>
+<p>:return a random value from the passed numpy.random function, as A Time object if time is True</p>
+<p>:rtype float, qppsim.Time.Time</p>
+<p>:raise AttributeError
+The random distribution specified by distribution_name was not found
+in numpy.random</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Des.Des.get_tx_success">
+<code class="descname">get_tx_success</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Des.html#Des.get_tx_success"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Des.Des.get_tx_success" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a transmission is successful or not. It uses a uniform random
+distribution and the TX error probability.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Des.Des.now">
+<code class="descname">now</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Des.html#Des.now"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Des.Des.now" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current simulation time.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.num_rbs">
+<code class="descname">num_rbs</code><a class="headerlink" href="#qppsim.Des.Des.num_rbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the total number of RBs to allocate in each TTI.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.output_dir">
+<code class="descname">output_dir</code><a class="headerlink" href="#qppsim.Des.Des.output_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the output directory for the traces.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.packet_id">
+<code class="descname">packet_id</code><a class="headerlink" href="#qppsim.Des.Des.packet_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the last packet ID assigned</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.preemption_policy">
+<code class="descname">preemption_policy</code><a class="headerlink" href="#qppsim.Des.Des.preemption_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the reference to the active Pre-emption module.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.priority_policy">
+<code class="descname">priority_policy</code><a class="headerlink" href="#qppsim.Des.Des.priority_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the reference to the active Priority policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.qos_filename">
+<code class="descname">qos_filename</code><a class="headerlink" href="#qppsim.Des.Des.qos_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the filename for the QoS trace.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.qos_monitor">
+<code class="descname">qos_monitor</code><a class="headerlink" href="#qppsim.Des.Des.qos_monitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the reference to the active QoS Monitor.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.qos_monitor_interval">
+<code class="descname">qos_monitor_interval</code><a class="headerlink" href="#qppsim.Des.Des.qos_monitor_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the interval at which the scheduler checks the bearers QoS.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.rtx_threshold">
+<code class="descname">rtx_threshold</code><a class="headerlink" href="#qppsim.Des.Des.rtx_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return probability of TX error.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.scheduler">
+<code class="descname">scheduler</code><a class="headerlink" href="#qppsim.Des.Des.scheduler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the reference to the active Scheduler.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.seed">
+<code class="descname">seed</code><a class="headerlink" href="#qppsim.Des.Des.seed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the random seed used in the simulation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Des.Des.start_simulation">
+<code class="descname">start_simulation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Des.html#Des.start_simulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Des.Des.start_simulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the simulation. Create the events to stop the simulation and the
+scheduling for the first TTI, and then process the event queue until we
+hit the &#8216;end_simulation&#8217; event.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.stop_time">
+<code class="descname">stop_time</code><a class="headerlink" href="#qppsim.Des.Des.stop_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the simulation stop time.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.topology_filename">
+<code class="descname">topology_filename</code><a class="headerlink" href="#qppsim.Des.Des.topology_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the topology trace filename</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Des.Des.trace_writer">
+<code class="descname">trace_writer</code><a class="headerlink" href="#qppsim.Des.Des.trace_writer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a reference to the active TraceWriter.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="qppsim.Des.get_des">
+<code class="descclassname">qppsim.Des.</code><code class="descname">get_des</code><span class="sig-paren">(</span><em>new_instance=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Des.html#get_des"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Des.get_des" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a reference to the instance of the Des class. If there is none,
+a new instance is created with the default parameters.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="qppsim.Des.instance">
+<code class="descclassname">qppsim.Des.</code><code class="descname">instance</code><em class="property"> = None</em><a class="headerlink" href="#qppsim.Des.instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference to the active instance of this class</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="qppsim.Event.html" class="btn btn-neutral float-right" title="qppsim.Event module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="qppsim.BearerList.html" class="btn btn-neutral" title="qppsim.BearerList module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

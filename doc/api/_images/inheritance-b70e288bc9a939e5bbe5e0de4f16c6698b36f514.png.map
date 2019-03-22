@@ -1,0 +1,6 @@
+<map id="inheritancee6e038bc79" name="inheritancee6e038bc79">
+<area shape="rect" id="node1" href="qppsim.qosmonitor.QosMonitorBase.html#qppsim.qosmonitor.QosMonitorBase.QosMonitorBase" target="_top" title="Base class for QoS Monitors. Defines a method for getting and aggregating" alt="" coords="5,51,345,75"/>
+<area shape="rect" id="node3" href="qppsim.qosmonitor.QosMonitorDefault.html#qppsim.qosmonitor.QosMonitorDefault.QosMonitorDefault" target="_top" title="Default QoS Monitor. This monitor only uses the values collected for the" alt="" coords="393,27,759,51"/>
+<area shape="rect" id="node4" href="qppsim.qosmonitor.QosMonitorDummy.html#qppsim.qosmonitor.QosMonitorDummy.QosMonitorDummy" target="_top" title="Dummy QoS Monitor. This monitor only reports &#39;NaN&#39; and &#39;0&#39; as the QoS values" alt="" coords="390,74,763,97"/>
+<area shape="rect" id="node2" href="qppsim.qosmonitor.QosMonitorBase.html#qppsim.qosmonitor.QosMonitorBase.TraceableQos" target="_top" title="Class that provides a format to trace QoS values, composed by the minimum," alt="" coords="14,5,335,29"/>
+</map>

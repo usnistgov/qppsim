@@ -1,0 +1,25 @@
+qppsim.prioritypolicy package
+=============================
+
+Submodules
+----------
+
+.. toctree::
+
+   qppsim.prioritypolicy.PriorityPolicyBase
+   qppsim.prioritypolicy.PriorityPolicySample
+
+Module Contents
+---------------
+
+.. automodule:: qppsim.prioritypolicy
+    :members:
+    :undoc-members:
+    :show-inheritance:
+Class Diagram
+-------------
+
+.. inheritance-diagram:: qppsim.prioritypolicy.PriorityPolicyBase qppsim.prioritypolicy.PriorityPolicySample 
+    :parts: 0
+
+

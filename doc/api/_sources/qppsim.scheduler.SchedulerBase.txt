@@ -1,0 +1,14 @@
+qppsim.scheduler.SchedulerBase module
+=====================================
+
+.. inheritance-diagram:: qppsim.scheduler.SchedulerBase
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.scheduler.SchedulerBase
+    :members:
+    :undoc-members:
+    :show-inheritance:

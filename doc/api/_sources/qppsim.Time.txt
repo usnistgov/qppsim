@@ -1,0 +1,14 @@
+qppsim.Time module
+==================
+
+.. inheritance-diagram:: qppsim.Time
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.Time
+    :members:
+    :undoc-members:
+    :show-inheritance:

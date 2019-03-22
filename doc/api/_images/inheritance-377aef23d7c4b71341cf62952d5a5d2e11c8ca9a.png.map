@@ -1,0 +1,4 @@
+<map id="inheritanced90eab0f18" name="inheritanced90eab0f18">
+<area shape="rect" id="node1" href="qppsim.accesscontrol.AccessControlBase.html#qppsim.accesscontrol.AccessControlBase.AccessControlBase" title="Base class for the Access Control Models. It provides a method to compute the" alt="" coords="4,4,342,25"/>
+<area shape="rect" id="node2" href="#qppsim.accesscontrol.AccessControlTraceOnly.AccessControlTraceOnly" title="Implementation of the Access Control module that only traces the request" alt="" coords="381,4,764,25"/>
+</map>

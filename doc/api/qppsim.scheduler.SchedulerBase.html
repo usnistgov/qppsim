@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.scheduler.SchedulerBase module &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qppsim.scheduler.SchedulerRoundRobin module" href="qppsim.scheduler.SchedulerRoundRobin.html" />
+    <link rel="prev" title="qppsim.scheduler package" href="qppsim.scheduler.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="qppsim.html">qppsim package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="qppsim.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="qppsim.accesscontrol.html">qppsim.accesscontrol package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.preemption.html">qppsim.preemption package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.prioritypolicy.html">qppsim.prioritypolicy package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.qosmonitor.html">qppsim.qosmonitor package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="qppsim.scheduler.html">qppsim.scheduler package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="qppsim.scheduler.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.scheduler.html#module-qppsim.scheduler">Module Contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.scheduler.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="qppsim.html">qppsim package</a> &raquo;</li>
+        
+          <li><a href="qppsim.scheduler.html">qppsim.scheduler package</a> &raquo;</li>
+        
+      <li>qppsim.scheduler.SchedulerBase module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/qppsim.scheduler.SchedulerBase.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="qppsim-scheduler-schedulerbase-module">
+<h1>qppsim.scheduler.SchedulerBase module<a class="headerlink" href="#qppsim-scheduler-schedulerbase-module" title="Permalink to this headline">¶</a></h1>
+<img src="_images/inheritance-074d3ef2847943e6529cc961fbffd1eaff1b56ee.png" alt="Inheritance diagram of qppsim.scheduler.SchedulerBase" usemap="#inheritance80b8416361" class="inheritance"/>
+<map id="inheritance80b8416361" name="inheritance80b8416361">
+<area shape="rect" id="node1" href="#qppsim.scheduler.SchedulerBase.SchedulerBase" target="_top" title="Base class for the schedulers. Provides a basic constructor that must be" alt="" coords="5,5,340,31"/>
+</map>
+<div class="section" id="module-qppsim.scheduler.SchedulerBase">
+<span id="documentation"></span><h2>Documentation<a class="headerlink" href="#module-qppsim.scheduler.SchedulerBase" title="Permalink to this headline">¶</a></h2>
+<p>Module with the base class for the Schedulers. It also defines the delay for
+attempting retransmission for the RBs that failed.</p>
+<dl class="data">
+<dt id="qppsim.scheduler.SchedulerBase.RTX_DELAY">
+<code class="descclassname">qppsim.scheduler.SchedulerBase.</code><code class="descname">RTX_DELAY</code><em class="property"> = &lt;qppsim.Time.Time object&gt;</em><a class="headerlink" href="#qppsim.scheduler.SchedulerBase.RTX_DELAY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amount of milliseconds to wait before attempting to retransmit a failed
+transmission</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="qppsim.scheduler.SchedulerBase.SchedulerBase">
+<em class="property">class </em><code class="descclassname">qppsim.scheduler.SchedulerBase.</code><code class="descname">SchedulerBase</code><span class="sig-paren">(</span><em>num_rbs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/scheduler/SchedulerBase.html#SchedulerBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.scheduler.SchedulerBase.SchedulerBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Base class for the schedulers. Provides a basic constructor that must be
+called by the subclasses, a dictionary with the RBs that need retransmission
+sorted by the time at which they will be retransmitted, a method to process
+the RBs to retransmit in the current TTI, a method to process the allocations
+made, a method to transmit RBs that were awaiting retransmission, and a method
+to put back in the retransmission queue RBs that were awaiting retransmission
+and their TX failed again.</p>
+<p>It defines the &#8216;schedule&#8217; method, that actually holds the scheduler logic,
+but provides no implementation.</p>
+<dl class="attribute">
+<dt id="qppsim.scheduler.SchedulerBase.SchedulerBase.last_qos_check">
+<code class="descname">last_qos_check</code><a class="headerlink" href="#qppsim.scheduler.SchedulerBase.SchedulerBase.last_qos_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the last time when the bearers QoS was checked.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.scheduler.SchedulerBase.SchedulerBase.num_rbs">
+<code class="descname">num_rbs</code><a class="headerlink" href="#qppsim.scheduler.SchedulerBase.SchedulerBase.num_rbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the total number of RBs to allocate in each TTI</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.scheduler.SchedulerBase.SchedulerBase.process_allocations">
+<code class="descname">process_allocations</code><span class="sig-paren">(</span><em>allocations</em>, <em>bearers</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/scheduler/SchedulerBase.html#SchedulerBase.process_allocations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.scheduler.SchedulerBase.SchedulerBase.process_allocations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process the allocations for this TTI. For each bearer allocation, check
+with the DES, if the transmission succeeds, and either transmit the RBs,
+or put them in the &#8216;awaiting retransmission&#8217; queue, with the time
+at which to attempt retransmission.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.scheduler.SchedulerBase.SchedulerBase.process_retransmissions">
+<code class="descname">process_retransmissions</code><span class="sig-paren">(</span><em>current_time</em>, <em>bearers</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/scheduler/SchedulerBase.html#SchedulerBase.process_retransmissions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.scheduler.SchedulerBase.SchedulerBase.process_retransmissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process the RBs that need to be retransmitted in this TTI. If this is the
+4th retransmission, assume automatic TX success. Otherwise, check with the
+DES, and either transmit the RBs, or put them back in the &#8216;awaiting
+retransmission&#8217; queue, with an updated time to attempt retransmission.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.scheduler.SchedulerBase.SchedulerBase.rtx">
+<code class="descname">rtx</code><span class="sig-paren">(</span><em>current_time</em>, <em>ue</em>, <em>bid</em>, <em>rbs</em>, <em>tbs</em>, <em>num_rtx</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/scheduler/SchedulerBase.html#SchedulerBase.rtx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.scheduler.SchedulerBase.SchedulerBase.rtx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a number of RBs to the &#8216;awaiting retransmission&#8217; queue.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.scheduler.SchedulerBase.SchedulerBase.rtx_pending">
+<code class="descname">rtx_pending</code><a class="headerlink" href="#qppsim.scheduler.SchedulerBase.SchedulerBase.rtx_pending" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dictionary with the RBs pending retransmission.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.scheduler.SchedulerBase.SchedulerBase.schedule">
+<code class="descname">schedule</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/scheduler/SchedulerBase.html#SchedulerBase.schedule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.scheduler.SchedulerBase.SchedulerBase.schedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method that holds the logic of the scheduler and provides the allocation
+for a TTI. Each subclass must include the following steps in this method:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Get the current time from the DES</li>
+<li>Get the list of active bearers</li>
+<li>Add an event for the next scheduling event, at current_time + 1</li>
+<li>If needed, check the QoS of the bearers</li>
+<li><dl class="first docutils">
+<dt>Process the retransmissions for the current TTI calling</dt>
+<dd>&#8216;process_retransmissions&#8217;</dd>
+</dl>
+</li>
+<li>Allocate the remaining RBs according to the scheduler logic</li>
+<li>Process the allocation by calling &#8216;process_allocations&#8217;</li>
+</ul>
+</div></blockquote>
+<p>Not implemented</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.scheduler.SchedulerBase.SchedulerBase.tx_from_rtx">
+<code class="descname">tx_from_rtx</code><span class="sig-paren">(</span><em>bearers</em>, <em>ue</em>, <em>bid</em>, <em>tbs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/scheduler/SchedulerBase.html#SchedulerBase.tx_from_rtx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.scheduler.SchedulerBase.SchedulerBase.tx_from_rtx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transmit a certain amount of bytes from the &#8216;awaiting retransmission&#8217;
+queue in a bearer.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="qppsim.scheduler.SchedulerRoundRobin.html" class="btn btn-neutral float-right" title="qppsim.scheduler.SchedulerRoundRobin module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="qppsim.scheduler.html" class="btn btn-neutral" title="qppsim.scheduler package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

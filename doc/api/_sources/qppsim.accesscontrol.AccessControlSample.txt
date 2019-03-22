@@ -1,0 +1,14 @@
+qppsim.accesscontrol.AccessControlSample module
+===============================================
+
+.. inheritance-diagram:: qppsim.accesscontrol.AccessControlSample
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.accesscontrol.AccessControlSample
+    :members:
+    :undoc-members:
+    :show-inheritance:

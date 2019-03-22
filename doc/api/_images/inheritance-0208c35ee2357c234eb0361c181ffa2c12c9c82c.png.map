@@ -1,0 +1,6 @@
+<map id="inheritance26fff7fc7d" name="inheritance26fff7fc7d">
+<area shape="rect" id="node1" href="qppsim.preemption.PreemptionBase.html#qppsim.preemption.PreemptionBase.PreemptionBase" title="Base class for the Pre&#45;emption implementations. It defines a method to attempt" alt="" coords="4,41,282,61"/>
+<area shape="rect" id="node2" href="qppsim.preemption.PreemptionDummy.html#qppsim.preemption.PreemptionDummy.PreemptionDummy" title="Class for the Dummy Pre&#45;emption implementation. This implementation always" alt="" coords="389,4,694,23"/>
+<area shape="rect" id="node3" href="qppsim.preemption.PreemptionSamplePreemptAll.html#qppsim.preemption.PreemptionSamplePreemptAll.PreemptionSamplePreemptAll" title="Class for a sample Pre&#45;emption implementation. This implementation selects" alt="" coords="336,41,747,61"/>
+<area shape="rect" id="node4" href="qppsim.preemption.PreemptionSamplePreemptSome.html#qppsim.preemption.PreemptionSamplePreemptSome.PreemptionSamplePreemptSome" title="Class for a sample Pre&#45;emption implementation. This implementation selects" alt="" coords="319,79,764,98"/>
+</map>

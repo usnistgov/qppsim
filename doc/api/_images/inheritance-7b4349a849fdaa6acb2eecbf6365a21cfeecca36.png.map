@@ -1,0 +1,4 @@
+<map id="inheritanced68aec9c6e" name="inheritanced68aec9c6e">
+<area shape="rect" id="node1" href="#qppsim.Bearer.Bearer" title="Class providing the model for Bearers. It includes the QoS and ARP configuration" alt="" coords="13,55,176,80"/>
+<area shape="rect" id="node2" title="QoSTuple(min, avg, max, last)" alt="" coords="5,5,184,31"/>
+</map>

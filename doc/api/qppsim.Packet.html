@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.Packet module &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qppsim.Time module" href="qppsim.Time.html" />
+    <link rel="prev" title="qppsim.Event module" href="qppsim.Event.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="qppsim.html">qppsim package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="qppsim.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Amc.html">qppsim.Amc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.AppProfile.html">qppsim.AppProfile module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Application.html">qppsim.Application module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Bearer.html">qppsim.Bearer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.BearerList.html">qppsim.BearerList module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Des.html">qppsim.Des module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Event.html">qppsim.Event module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">qppsim.Packet module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-qppsim.Packet">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Time.html">qppsim.Time module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.TraceWriter.html">qppsim.TraceWriter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Ue.html">qppsim.Ue module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.XmlScenarioParser.html">qppsim.XmlScenarioParser module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="qppsim.html">qppsim package</a> &raquo;</li>
+        
+      <li>qppsim.Packet module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/qppsim.Packet.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="qppsim-packet-module">
+<h1>qppsim.Packet module<a class="headerlink" href="#qppsim-packet-module" title="Permalink to this headline">¶</a></h1>
+<img src="_images/inheritance-160b20855938e05398197ad6151b76e86fac98a6.png" alt="Inheritance diagram of qppsim.Packet" usemap="#inheritance1493c24c19" class="inheritance"/>
+<map id="inheritance1493c24c19" name="inheritance1493c24c19">
+<area shape="rect" id="node1" href="#qppsim.Packet.Packet" target="_top" title="Class that models a Packet. A Packet contains the time at which is was" alt="" coords="5,5,167,31"/>
+</map>
+<div class="section" id="module-qppsim.Packet">
+<span id="documentation"></span><h2>Documentation<a class="headerlink" href="#module-qppsim.Packet" title="Permalink to this headline">¶</a></h2>
+<p>Module that provides the model for a Packet.</p>
+<dl class="class">
+<dt id="qppsim.Packet.Packet">
+<em class="property">class </em><code class="descclassname">qppsim.Packet.</code><code class="descname">Packet</code><span class="sig-paren">(</span><em>size</em>, <em>tx_time</em>, <em>app</em>, <em>pid=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Packet.html#Packet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Packet.Packet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class that models a Packet. A Packet contains the time at which is was
+created, the size (in bytes), the application that created the Packet,
+and a Packet ID (for tracing purposes).</p>
+<p>A packet also keeps track of how many of its bytes have been transmitted,
+and how many are awaiting retransmission.</p>
+<p>The class is hashable and comparable.</p>
+<dl class="method">
+<dt id="qppsim.Packet.Packet.add_overhead">
+<code class="descname">add_overhead</code><span class="sig-paren">(</span><em>overhead</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Packet.html#Packet.add_overhead"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Packet.Packet.add_overhead" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase the size of the packet due to lower layers overhead</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Packet.Packet.app">
+<code class="descname">app</code><a class="headerlink" href="#qppsim.Packet.Packet.app" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the application that created the Packet.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Packet.Packet.pending_size">
+<code class="descname">pending_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Packet.html#Packet.pending_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Packet.Packet.pending_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the amount of bytes that are pending to transmit.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Packet.Packet.pid">
+<code class="descname">pid</code><a class="headerlink" href="#qppsim.Packet.Packet.pid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Packet ID.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Packet.Packet.remove_overhead">
+<code class="descname">remove_overhead</code><span class="sig-paren">(</span><em>overhead</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Packet.html#Packet.remove_overhead"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Packet.Packet.remove_overhead" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decrease the size of the packet due to lower layers overhead</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Packet.Packet.retransmit_bytes">
+<code class="descname">retransmit_bytes</code><span class="sig-paren">(</span><em>amount</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Packet.html#Packet.retransmit_bytes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Packet.Packet.retransmit_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Successfully transmit a certain amount of bytes from the &#8216;awaiting
+retransmission&#8217; bytes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Packet.Packet.rtx_waiting_size">
+<code class="descname">rtx_waiting_size</code><a class="headerlink" href="#qppsim.Packet.Packet.rtx_waiting_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the amount of bytes that are awaiting retransmission.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Packet.Packet.size">
+<code class="descname">size</code><a class="headerlink" href="#qppsim.Packet.Packet.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Packet size in bytes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qppsim.Packet.Packet.transmit_bytes">
+<code class="descname">transmit_bytes</code><span class="sig-paren">(</span><em>amount</em>, <em>rtx=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Packet.html#Packet.transmit_bytes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Packet.Packet.transmit_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transmit a certain amount of bytes. If &#8216;rtx&#8217; is True, the bytes are
+marked as &#8216;awaiting retransmission&#8217;. Otherwise, they are successfully
+transmitted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Packet.Packet.tx_size">
+<code class="descname">tx_size</code><a class="headerlink" href="#qppsim.Packet.Packet.tx_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the amount of bytes that have already been transmitted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Packet.Packet.tx_time">
+<code class="descname">tx_time</code><a class="headerlink" href="#qppsim.Packet.Packet.tx_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the time at which the packet was created.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="qppsim.Time.html" class="btn btn-neutral float-right" title="qppsim.Time module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="qppsim.Event.html" class="btn btn-neutral" title="qppsim.Event module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

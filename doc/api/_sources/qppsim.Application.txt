@@ -1,0 +1,14 @@
+qppsim.Application module
+=========================
+
+.. inheritance-diagram:: qppsim.Application
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.Application
+    :members:
+    :undoc-members:
+    :show-inheritance:

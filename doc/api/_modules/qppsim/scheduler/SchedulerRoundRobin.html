@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.scheduler.SchedulerRoundRobin &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../qppsim.html">qppsim package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>qppsim.scheduler.SchedulerRoundRobin</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for qppsim.scheduler.SchedulerRoundRobin</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1">#</span>
+<span class="c1"># NIST-developed software is provided by NIST as a public service. You may</span>
+<span class="c1"># use, copy and distribute copies of the software in any medium, provided that</span>
+<span class="c1"># you keep intact this entire notice. You may improve, modify and create</span>
+<span class="c1"># derivative works of the software or any portion of the software, and you may</span>
+<span class="c1"># copy and distribute such modifications or works. Modified works should carry</span>
+<span class="c1"># a notice stating that you changed the software and should note the date and</span>
+<span class="c1"># nature of any such change. Please explicitly acknowledge the National</span>
+<span class="c1"># Institute of Standards and Technology as the source of the software.</span>
+<span class="c1">#</span>
+<span class="c1"># NIST-developed software is expressly provided &quot;AS IS.&quot; NIST MAKES NO</span>
+<span class="c1"># WARRANTY OF ANY KIND, EXPRESS, IMPLIED, IN FACT OR ARISING BY OPERATION OF</span>
+<span class="c1"># LAW, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTY OF MERCHANTABILITY,</span>
+<span class="c1"># FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT AND DATA ACCURACY. NIST</span>
+<span class="c1"># NEITHER REPRESENTS NOR WARRANTS THAT THE OPERATION OF THE SOFTWARE WILL BE</span>
+<span class="c1"># UNINTERRUPTED OR ERROR-FREE, OR THAT ANY DEFECTS WILL BE CORRECTED. NIST</span>
+<span class="c1"># DOES NOT WARRANT OR MAKE ANY REPRESENTATIONS REGARDING THE USE OF THE</span>
+<span class="c1"># SOFTWARE OR THE RESULTS THEREOF, INCLUDING BUT NOT LIMITED TO THE</span>
+<span class="c1"># CORRECTNESS, ACCURACY, RELIABILITY, OR USEFULNESS OF THE SOFTWARE.</span>
+<span class="c1">#</span>
+<span class="c1"># You are solely responsible for determining the appropriateness of using and</span>
+<span class="c1"># distributing the software and you assume all risks associated with its use,</span>
+<span class="c1"># including but not limited to the risks and costs of program errors,</span>
+<span class="c1"># compliance with applicable laws, damage to or loss of data, programs or</span>
+<span class="c1"># equipment, and the unavailability or interruption of operation. This</span>
+<span class="c1"># software is not intended to be used in any situation where a failure could</span>
+<span class="c1"># cause risk of injury or damage to property. The software developed by NIST</span>
+<span class="c1"># employees is not subject to copyright protection within the United States.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Module with a Round-Robin Scheduler. It follows the logic of the NistRR scheduler</span>
+<span class="sd">in ns-3</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">qppsim.Amc</span>
+<span class="kn">import</span> <span class="nn">qppsim.BearerList</span>
+<span class="kn">import</span> <span class="nn">qppsim.Des</span>
+<span class="kn">import</span> <span class="nn">qppsim.Event</span>
+<span class="kn">import</span> <span class="nn">qppsim.Time</span>
+<span class="kn">import</span> <span class="nn">qppsim.scheduler.SchedulerBase</span>
+
+
+<div class="viewcode-block" id="SchedulerRoundRobin"><a class="viewcode-back" href="../../../qppsim.scheduler.SchedulerRoundRobin.html#qppsim.scheduler.SchedulerRoundRobin.SchedulerRoundRobin">[docs]</a><span class="k">class</span> <span class="nc">SchedulerRoundRobin</span><span class="p">(</span><span class="n">qppsim</span><span class="o">.</span><span class="n">scheduler</span><span class="o">.</span><span class="n">SchedulerBase</span><span class="o">.</span><span class="n">SchedulerBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class with an implementation of a Round-Robin scheduler.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_rbs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor that extends the parent&#39;s constructor by adding references</span>
+<span class="sd">        to the last UE and last BID that were allocated.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">num_rbs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__last_ue</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__last_bid</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="SchedulerRoundRobin.schedule"><a class="viewcode-back" href="../../../qppsim.scheduler.SchedulerRoundRobin.html#qppsim.scheduler.SchedulerRoundRobin.SchedulerRoundRobin.schedule">[docs]</a>    <span class="k">def</span> <span class="nf">schedule</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method that holds the logic of the scheduler and provides the allocation</span>
+<span class="sd">        for a TTI. The steps followed are:</span>
+<span class="sd">            - Get the current time from the DES</span>
+<span class="sd">            - Get the list of active bearers</span>
+<span class="sd">            - Add an event for the next scheduling event, at current_time + 1</span>
+<span class="sd">            - If needed, check the QoS of the bearers</span>
+<span class="sd">            - Process the retransmissions for the current TTI calling the parent&#39;s</span>
+<span class="sd">                &#39;process_retransmissions&#39;</span>
+<span class="sd">            - Locate the last UE and BID allocated. If they cannot be located,</span>
+<span class="sd">                roll back to the first bearer in the UE, or first UE in the list.</span>
+<span class="sd">            - Allocate RBs one by one to the bearers that have data pending to</span>
+<span class="sd">                transmit, in a Round-Robin fashion, until we run out of RBs or</span>
+<span class="sd">                there are no more bearers with data to transmit.</span>
+<span class="sd">            - Allocate the remaining RBs according to the scheduler logic</span>
+<span class="sd">            - Process the allocation by calling the parent&#39;s &#39;process_allocations&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">des</span> <span class="o">=</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">Des</span><span class="o">.</span><span class="n">get_des</span><span class="p">()</span>
+        <span class="c1"># Get info from the DES and the bearer list</span>
+        <span class="n">current_time</span> <span class="o">=</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">Des</span><span class="o">.</span><span class="n">get_des</span><span class="p">()</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="n">bearers</span> <span class="o">=</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">BearerList</span><span class="o">.</span><span class="n">get_bearer_list</span><span class="p">()</span><span class="o">.</span><span class="n">bearers</span>
+        <span class="c1"># First schedule the next scheduler event</span>
+        <span class="n">des</span><span class="o">.</span><span class="n">add_event</span><span class="p">(</span><span class="n">qppsim</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="n">Event</span><span class="p">(</span><span class="n">des</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">+</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">ONE_MILLISECOND</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">schedule</span><span class="p">,</span> <span class="p">[]))</span>
+        <span class="c1"># Then get the Bearers&#39; QoS metrics</span>
+        <span class="k">if</span> <span class="n">current_time</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_qos_check</span> <span class="o">+</span> <span class="n">des</span><span class="o">.</span><span class="n">qos_monitor_interval</span><span class="p">:</span>
+            <span class="n">bearer_qos</span> <span class="o">=</span> <span class="n">des</span><span class="o">.</span><span class="n">qos_monitor</span><span class="o">.</span><span class="n">get_qos</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">last_qos_check</span> <span class="o">=</span> <span class="n">current_time</span>
+
+        <span class="c1"># Now do the scheduling</span>
+        <span class="c1"># First the retransmissions</span>
+        <span class="n">available_rbs</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">num_rbs</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_retransmissions</span><span class="p">(</span><span class="n">current_time</span><span class="p">,</span> <span class="n">bearers</span><span class="p">)</span>
+        <span class="c1"># Now allocate in RR order.</span>
+        <span class="c1"># First, figure out where we left last time</span>
+        <span class="c1"># If this is the first time, we start from the beginning of the bearer list map</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ue_idx</span> <span class="o">=</span> <span class="n">bearers</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__last_ue</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__last_ue</span> <span class="o">=</span> <span class="n">bearers</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__last_bid</span> <span class="o">=</span> <span class="n">bearers</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">__last_ue</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">ue_idx</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">bearer_idx</span> <span class="o">=</span> <span class="n">bearers</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">__last_ue</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__last_bid</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__last_bid</span> <span class="o">=</span> <span class="n">bearers</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">__last_ue</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">bearer_idx</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="n">allocations</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">ue_tmp</span> <span class="o">=</span> <span class="n">bearers</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ue_idx</span><span class="p">]</span>
+        <span class="n">bid_tmp</span> <span class="o">=</span> <span class="n">bearers</span><span class="p">[</span><span class="n">ue_tmp</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">bearer_idx</span><span class="p">]</span>
+        <span class="k">while</span> <span class="n">available_rbs</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># Now we know who&#39;s next</span>
+            <span class="k">if</span> <span class="n">ue_tmp</span> <span class="ow">in</span> <span class="n">allocations</span> <span class="ow">and</span> <span class="n">bid_tmp</span> <span class="ow">in</span> <span class="n">allocations</span><span class="p">[</span><span class="n">ue_tmp</span><span class="p">]:</span>
+                <span class="n">bytes_out</span> <span class="o">=</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">Amc</span><span class="o">.</span><span class="n">TBS_FOR_MCS</span><span class="p">[</span><span class="n">ue_tmp</span><span class="o">.</span><span class="n">mcs</span><span class="p">][</span><span class="n">allocations</span><span class="p">[</span><span class="n">ue_tmp</span><span class="p">][</span><span class="n">bid_tmp</span><span class="p">]]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">bytes_out</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">if</span> <span class="n">bearers</span><span class="p">[</span><span class="n">ue_tmp</span><span class="p">][</span><span class="n">bid_tmp</span><span class="p">]</span><span class="o">.</span><span class="n">pending_size</span><span class="p">()</span> <span class="o">-</span> <span class="n">bytes_out</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">ue_tmp</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allocations</span><span class="p">:</span>
+                    <span class="n">allocations</span><span class="p">[</span><span class="n">ue_tmp</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="k">if</span> <span class="n">bid_tmp</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allocations</span><span class="p">[</span><span class="n">ue_tmp</span><span class="p">]:</span>
+                    <span class="n">allocations</span><span class="p">[</span><span class="n">ue_tmp</span><span class="p">][</span><span class="n">bid_tmp</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="n">allocations</span><span class="p">[</span><span class="n">ue_tmp</span><span class="p">][</span><span class="n">bid_tmp</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">__last_ue</span> <span class="o">=</span> <span class="n">ue_tmp</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">__last_bid</span> <span class="o">=</span> <span class="n">bid_tmp</span>
+                <span class="n">available_rbs</span> <span class="o">-=</span> <span class="mi">1</span>
+
+            <span class="n">bearer_idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">bearer_idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">bearers</span><span class="p">[</span><span class="n">ue_tmp</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">bearer_idx</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">ue_idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">ue_idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">bearers</span><span class="p">)</span>
+                <span class="n">ue_tmp</span> <span class="o">=</span> <span class="n">bearers</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ue_idx</span><span class="p">]</span>
+            <span class="n">bid_tmp</span> <span class="o">=</span> <span class="n">bearers</span><span class="p">[</span><span class="n">ue_tmp</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">bearer_idx</span><span class="p">]</span>
+
+            <span class="c1"># Check if we have gone through all the bearers and not being able to allocate any</span>
+            <span class="k">if</span> <span class="n">ue_tmp</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">__last_ue</span> <span class="ow">and</span> <span class="n">bid_tmp</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">__last_bid</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">ue_tmp</span> <span class="ow">in</span> <span class="n">allocations</span> <span class="ow">and</span> <span class="n">bid_tmp</span> <span class="ow">in</span> <span class="n">allocations</span><span class="p">[</span><span class="n">ue_tmp</span><span class="p">]:</span>
+                    <span class="n">bytes_out</span> <span class="o">=</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">Amc</span><span class="o">.</span><span class="n">TBS_FOR_MCS</span><span class="p">[</span><span class="n">ue_tmp</span><span class="o">.</span><span class="n">mcs</span><span class="p">][</span><span class="n">allocations</span><span class="p">[</span><span class="n">ue_tmp</span><span class="p">][</span><span class="n">bid_tmp</span><span class="p">]]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">bytes_out</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">if</span> <span class="n">bearers</span><span class="p">[</span><span class="n">ue_tmp</span><span class="p">][</span><span class="n">bid_tmp</span><span class="p">]</span><span class="o">.</span><span class="n">pending_size</span><span class="p">()</span> <span class="o">-</span> <span class="n">bytes_out</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">break</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">process_allocations</span><span class="p">(</span><span class="n">allocations</span><span class="p">,</span> <span class="n">bearers</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

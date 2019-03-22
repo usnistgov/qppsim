@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.scheduler.SchedulerRoundRobin module &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qppsim.Amc module" href="qppsim.Amc.html" />
+    <link rel="prev" title="qppsim.scheduler.SchedulerBase module" href="qppsim.scheduler.SchedulerBase.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="qppsim.html">qppsim package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="qppsim.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="qppsim.accesscontrol.html">qppsim.accesscontrol package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.preemption.html">qppsim.preemption package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.prioritypolicy.html">qppsim.prioritypolicy package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.qosmonitor.html">qppsim.qosmonitor package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="qppsim.scheduler.html">qppsim.scheduler package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="qppsim.scheduler.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.scheduler.html#module-qppsim.scheduler">Module Contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.scheduler.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="qppsim.html">qppsim package</a> &raquo;</li>
+        
+          <li><a href="qppsim.scheduler.html">qppsim.scheduler package</a> &raquo;</li>
+        
+      <li>qppsim.scheduler.SchedulerRoundRobin module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/qppsim.scheduler.SchedulerRoundRobin.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="qppsim-scheduler-schedulerroundrobin-module">
+<h1>qppsim.scheduler.SchedulerRoundRobin module<a class="headerlink" href="#qppsim-scheduler-schedulerroundrobin-module" title="Permalink to this headline">¶</a></h1>
+<img src="_images/inheritance-30ab94244ca23defeeb51b0e3a207c75f609b5c4.png" alt="Inheritance diagram of qppsim.scheduler.SchedulerRoundRobin" usemap="#inheritance3f71aebdf0" class="inheritance"/>
+<map id="inheritance3f71aebdf0" name="inheritance3f71aebdf0">
+<area shape="rect" id="node1" href="qppsim.scheduler.SchedulerBase.html#qppsim.scheduler.SchedulerBase.SchedulerBase" target="_top" title="Base class for the schedulers. Provides a basic constructor that must be" alt="" coords="5,5,323,29"/>
+<area shape="rect" id="node2" href="#qppsim.scheduler.SchedulerRoundRobin.SchedulerRoundRobin" target="_top" title="Class with an implementation of a Round&#45;Robin scheduler." alt="" coords="368,5,763,29"/>
+</map>
+<div class="section" id="module-qppsim.scheduler.SchedulerRoundRobin">
+<span id="documentation"></span><h2>Documentation<a class="headerlink" href="#module-qppsim.scheduler.SchedulerRoundRobin" title="Permalink to this headline">¶</a></h2>
+<p>Module with a Round-Robin Scheduler. It follows the logic of the NistRR scheduler
+in ns-3</p>
+<dl class="class">
+<dt id="qppsim.scheduler.SchedulerRoundRobin.SchedulerRoundRobin">
+<em class="property">class </em><code class="descclassname">qppsim.scheduler.SchedulerRoundRobin.</code><code class="descname">SchedulerRoundRobin</code><span class="sig-paren">(</span><em>num_rbs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/scheduler/SchedulerRoundRobin.html#SchedulerRoundRobin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.scheduler.SchedulerRoundRobin.SchedulerRoundRobin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="qppsim.scheduler.SchedulerBase.html#qppsim.scheduler.SchedulerBase.SchedulerBase" title="qppsim.scheduler.SchedulerBase.SchedulerBase"><code class="xref py py-class docutils literal"><span class="pre">qppsim.scheduler.SchedulerBase.SchedulerBase</span></code></a></p>
+<p>Class with an implementation of a Round-Robin scheduler.</p>
+<dl class="method">
+<dt id="qppsim.scheduler.SchedulerRoundRobin.SchedulerRoundRobin.schedule">
+<code class="descname">schedule</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/scheduler/SchedulerRoundRobin.html#SchedulerRoundRobin.schedule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.scheduler.SchedulerRoundRobin.SchedulerRoundRobin.schedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method that holds the logic of the scheduler and provides the allocation
+for a TTI. The steps followed are:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Get the current time from the DES</li>
+<li>Get the list of active bearers</li>
+<li>Add an event for the next scheduling event, at current_time + 1</li>
+<li>If needed, check the QoS of the bearers</li>
+<li><dl class="first docutils">
+<dt>Process the retransmissions for the current TTI calling the parent&#8217;s</dt>
+<dd>&#8216;process_retransmissions&#8217;</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Locate the last UE and BID allocated. If they cannot be located,</dt>
+<dd>roll back to the first bearer in the UE, or first UE in the list.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Allocate RBs one by one to the bearers that have data pending to</dt>
+<dd>transmit, in a Round-Robin fashion, until we run out of RBs or
+there are no more bearers with data to transmit.</dd>
+</dl>
+</li>
+<li>Allocate the remaining RBs according to the scheduler logic</li>
+<li>Process the allocation by calling the parent&#8217;s &#8216;process_allocations&#8217;</li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="qppsim.Amc.html" class="btn btn-neutral float-right" title="qppsim.Amc module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="qppsim.scheduler.SchedulerBase.html" class="btn btn-neutral" title="qppsim.scheduler.SchedulerBase module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

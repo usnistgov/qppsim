@@ -1,0 +1,4 @@
+<map id="inheritance77dd1677dc" name="inheritance77dd1677dc">
+<area shape="rect" id="node1" href="qppsim.qosmonitor.QosMonitorBase.html#qppsim.qosmonitor.QosMonitorBase.QosMonitorBase" target="_top" title="Base class for QoS Monitors. Defines a method for getting and aggregating" alt="" coords="5,5,348,29"/>
+<area shape="rect" id="node2" href="#qppsim.qosmonitor.QosMonitorDefault.QosMonitorDefault" target="_top" title="Default QoS Monitor. This monitor only uses the values collected for the" alt="" coords="393,5,763,29"/>
+</map>

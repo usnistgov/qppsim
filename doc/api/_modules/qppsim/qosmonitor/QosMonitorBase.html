@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.qosmonitor.QosMonitorBase &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../qppsim.html">qppsim package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>qppsim.qosmonitor.QosMonitorBase</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for qppsim.qosmonitor.QosMonitorBase</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1">#</span>
+<span class="c1"># NIST-developed software is provided by NIST as a public service. You may</span>
+<span class="c1"># use, copy and distribute copies of the software in any medium, provided that</span>
+<span class="c1"># you keep intact this entire notice. You may improve, modify and create</span>
+<span class="c1"># derivative works of the software or any portion of the software, and you may</span>
+<span class="c1"># copy and distribute such modifications or works. Modified works should carry</span>
+<span class="c1"># a notice stating that you changed the software and should note the date and</span>
+<span class="c1"># nature of any such change. Please explicitly acknowledge the National</span>
+<span class="c1"># Institute of Standards and Technology as the source of the software.</span>
+<span class="c1">#</span>
+<span class="c1"># NIST-developed software is expressly provided &quot;AS IS.&quot; NIST MAKES NO</span>
+<span class="c1"># WARRANTY OF ANY KIND, EXPRESS, IMPLIED, IN FACT OR ARISING BY OPERATION OF</span>
+<span class="c1"># LAW, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTY OF MERCHANTABILITY,</span>
+<span class="c1"># FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT AND DATA ACCURACY. NIST</span>
+<span class="c1"># NEITHER REPRESENTS NOR WARRANTS THAT THE OPERATION OF THE SOFTWARE WILL BE</span>
+<span class="c1"># UNINTERRUPTED OR ERROR-FREE, OR THAT ANY DEFECTS WILL BE CORRECTED. NIST</span>
+<span class="c1"># DOES NOT WARRANT OR MAKE ANY REPRESENTATIONS REGARDING THE USE OF THE</span>
+<span class="c1"># SOFTWARE OR THE RESULTS THEREOF, INCLUDING BUT NOT LIMITED TO THE</span>
+<span class="c1"># CORRECTNESS, ACCURACY, RELIABILITY, OR USEFULNESS OF THE SOFTWARE.</span>
+<span class="c1">#</span>
+<span class="c1"># You are solely responsible for determining the appropriateness of using and</span>
+<span class="c1"># distributing the software and you assume all risks associated with its use,</span>
+<span class="c1"># including but not limited to the risks and costs of program errors,</span>
+<span class="c1"># compliance with applicable laws, damage to or loss of data, programs or</span>
+<span class="c1"># equipment, and the unavailability or interruption of operation. This</span>
+<span class="c1"># software is not intended to be used in any situation where a failure could</span>
+<span class="c1"># cause risk of injury or damage to property. The software developed by NIST</span>
+<span class="c1"># employees is not subject to copyright protection within the United States.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Module with the base class for QoS Monitors and a class to store the QoS values</span>
+<span class="sd">so they can be easily traced by the TraceWriter. It also provides a constant</span>
+<span class="sd">dictionary with the QoS parameters associated with each QCI value.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">abc</span> <span class="k">import</span> <span class="n">ABCMeta</span><span class="p">,</span> <span class="n">abstractmethod</span>
+
+<span class="kn">import</span> <span class="nn">qppsim.Des</span>
+
+<span class="c1">#: Dictionary with the QoS limits and parameters associated with each QCI value</span>
+<span class="c1">#: Key: QCI</span>
+<span class="c1">#: Value: Tuple with GBR/NGBR flag, Priority, Maximum Delay, Error and Loss Rate</span>
+<span class="n">QOS_LIMITS_PER_QCI</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">),</span>
+                      <span class="mi">2</span><span class="p">:</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">),</span>
+                      <span class="mi">3</span><span class="p">:</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">),</span>
+                      <span class="mi">4</span><span class="p">:</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mf">1e-6</span><span class="p">),</span>
+                      <span class="mi">5</span><span class="p">:</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">1e-6</span><span class="p">),</span>
+                      <span class="mi">6</span><span class="p">:</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mf">1e-6</span><span class="p">),</span>
+                      <span class="mi">7</span><span class="p">:</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">),</span>
+                      <span class="mi">8</span><span class="p">:</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mf">1e-6</span><span class="p">),</span>
+                      <span class="mi">9</span><span class="p">:</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mf">1e-6</span><span class="p">),</span>
+                     <span class="p">}</span>
+
+
+<div class="viewcode-block" id="QosMonitorBase"><a class="viewcode-back" href="../../../qppsim.qosmonitor.QosMonitorBase.html#qppsim.qosmonitor.QosMonitorBase.QosMonitorBase">[docs]</a><span class="k">class</span> <span class="nc">QosMonitorBase</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">ABCMeta</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Base class for QoS Monitors. Defines a method for getting and aggregating</span>
+<span class="sd">    the QoS metrics from the active bearers. Implements a method to trace the</span>
+<span class="sd">    collected QoS metrics.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor. By default, do not pre-empt based on QoS, and do not trace</span>
+<span class="sd">        the QoS. These attributes are public, so can be modified by the DES</span>
+<span class="sd">        according to its parameters.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">preempt_qos</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trace_qos</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="nd">@abstractmethod</span>
+<div class="viewcode-block" id="QosMonitorBase.get_qos"><a class="viewcode-back" href="../../../qppsim.qosmonitor.QosMonitorBase.html#qppsim.qosmonitor.QosMonitorBase.QosMonitorBase.get_qos">[docs]</a>    <span class="k">def</span> <span class="nf">get_qos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method for getting and aggregating the QoS metrics from the active bearer.</span>
+<span class="sd">        Not implemented.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="QosMonitorBase.do_trace_qos_stats"><a class="viewcode-back" href="../../../qppsim.qosmonitor.QosMonitorBase.html#qppsim.qosmonitor.QosMonitorBase.QosMonitorBase.do_trace_qos_stats">[docs]</a>    <span class="k">def</span> <span class="nf">do_trace_qos_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qos_stats</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method to trace the collected QoS metrics.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">trace_qos</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">ue</span> <span class="ow">in</span> <span class="n">qos_stats</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">bid</span> <span class="ow">in</span> <span class="n">qos_stats</span><span class="p">[</span><span class="n">ue</span><span class="p">]:</span>
+                    <span class="n">qppsim</span><span class="o">.</span><span class="n">Des</span><span class="o">.</span><span class="n">get_des</span><span class="p">()</span><span class="o">.</span><span class="n">trace_writer</span><span class="o">.</span><span class="n">trace_qos</span><span class="p">(</span>
+                        <span class="n">qppsim</span><span class="o">.</span><span class="n">Des</span><span class="o">.</span><span class="n">get_des</span><span class="p">()</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span> <span class="n">ue</span><span class="o">.</span><span class="n">imsi</span><span class="p">,</span> <span class="n">bid</span><span class="p">,</span>
+                        <span class="o">*</span><span class="p">(</span><span class="n">qos_stats</span><span class="p">[</span><span class="n">ue</span><span class="p">][</span><span class="n">bid</span><span class="p">]))</span></div></div>
+
+
+<div class="viewcode-block" id="TraceableQos"><a class="viewcode-back" href="../../../qppsim.qosmonitor.QosMonitorBase.html#qppsim.qosmonitor.QosMonitorBase.TraceableQos">[docs]</a><span class="k">class</span> <span class="nc">TraceableQos</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class that provides a format to trace QoS values, composed by the minimum,</span>
+<span class="sd">    average, maximum, and last values obtained.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">minimum</span><span class="p">,</span> <span class="n">average</span><span class="p">,</span> <span class="n">maximum</span><span class="p">,</span> <span class="n">last</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__minimum</span> <span class="o">=</span> <span class="n">minimum</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__average</span> <span class="o">=</span> <span class="n">average</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__maximum</span> <span class="o">=</span> <span class="n">maximum</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__last</span> <span class="o">=</span> <span class="n">last</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">minimum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the minimum value of the QoS values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__minimum</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">average</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the average value of the QoS values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__average</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the maximum value of the QoS values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__maximum</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">last</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the last value of the QoS values.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__last</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

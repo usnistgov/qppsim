@@ -1,0 +1,377 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.AppProfile &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qppsim.html">qppsim package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>qppsim.AppProfile</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for qppsim.AppProfile</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1">#</span>
+<span class="c1"># NIST-developed software is provided by NIST as a public service. You may</span>
+<span class="c1"># use, copy and distribute copies of the software in any medium, provided that</span>
+<span class="c1"># you keep intact this entire notice. You may improve, modify and create</span>
+<span class="c1"># derivative works of the software or any portion of the software, and you may</span>
+<span class="c1"># copy and distribute such modifications or works. Modified works should carry</span>
+<span class="c1"># a notice stating that you changed the software and should note the date and</span>
+<span class="c1"># nature of any such change. Please explicitly acknowledge the National</span>
+<span class="c1"># Institute of Standards and Technology as the source of the software.</span>
+<span class="c1">#</span>
+<span class="c1"># NIST-developed software is expressly provided &quot;AS IS.&quot; NIST MAKES NO</span>
+<span class="c1"># WARRANTY OF ANY KIND, EXPRESS, IMPLIED, IN FACT OR ARISING BY OPERATION OF</span>
+<span class="c1"># LAW, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTY OF MERCHANTABILITY,</span>
+<span class="c1"># FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT AND DATA ACCURACY. NIST</span>
+<span class="c1"># NEITHER REPRESENTS NOR WARRANTS THAT THE OPERATION OF THE SOFTWARE WILL BE</span>
+<span class="c1"># UNINTERRUPTED OR ERROR-FREE, OR THAT ANY DEFECTS WILL BE CORRECTED. NIST</span>
+<span class="c1"># DOES NOT WARRANT OR MAKE ANY REPRESENTATIONS REGARDING THE USE OF THE</span>
+<span class="c1"># SOFTWARE OR THE RESULTS THEREOF, INCLUDING BUT NOT LIMITED TO THE</span>
+<span class="c1"># CORRECTNESS, ACCURACY, RELIABILITY, OR USEFULNESS OF THE SOFTWARE.</span>
+<span class="c1">#</span>
+<span class="c1"># You are solely responsible for determining the appropriateness of using and</span>
+<span class="c1"># distributing the software and you assume all risks associated with its use,</span>
+<span class="c1"># including but not limited to the risks and costs of program errors,</span>
+<span class="c1"># compliance with applicable laws, damage to or loss of data, programs or</span>
+<span class="c1"># equipment, and the unavailability or interruption of operation. This</span>
+<span class="c1"># software is not intended to be used in any situation where a failure could</span>
+<span class="c1"># cause risk of injury or damage to property. The software developed by NIST</span>
+<span class="c1"># employees is not subject to copyright protection within the United States.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Module that defines an Application Profile.</span>
+
+<span class="sd">An Application Profile defines a template for applications that share their</span>
+<span class="sd">behavior in terms of data rate (defined as the combination of packet size,</span>
+<span class="sd">inter-packet interval, number of packets per session, and inter-session</span>
+<span class="sd">interval). These values are defined as tuples containing the name of a</span>
+<span class="sd">random distribution in numpy.random, and the parameters to such distribution</span>
+<span class="sd">as a list. Additionally, we can define the distribution to be &#39;constant&#39;,</span>
+<span class="sd">which will return always the first parameter in the list.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">qppsim.Application</span>
+<span class="kn">import</span> <span class="nn">qppsim.Des</span>
+<span class="kn">import</span> <span class="nn">qppsim.Event</span>
+<span class="kn">import</span> <span class="nn">qppsim.Time</span>
+
+
+<div class="viewcode-block" id="AppProfile"><a class="viewcode-back" href="../../qppsim.AppProfile.html#qppsim.AppProfile.AppProfile">[docs]</a><span class="k">class</span> <span class="nc">AppProfile</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class that defines an Application Profile.</span>
+
+<span class="sd">    An Application Profile defines a template for applications that share their</span>
+<span class="sd">    behavior in terms of data rate (defined as the combination of packet size,</span>
+<span class="sd">    inter-packet interval, number of packets per session, and inter-session</span>
+<span class="sd">    interval). These values are defined as tuples containing the name of a</span>
+<span class="sd">    random distribution in numpy.random, and the parameters to such distribution</span>
+<span class="sd">    as a list. Additionally, we can define the distribution to be &#39;constant&#39;,</span>
+<span class="sd">    which will return always the first parameter in the list.</span>
+
+<span class="sd">    The class provides a method to generate an application instance based on</span>
+<span class="sd">    this profile, by providing the UE where to install the application, and the</span>
+<span class="sd">    start and stop times.</span>
+
+<span class="sd">    The class is hashable and comparable.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">packet_size</span><span class="p">,</span> <span class="n">packet_interval</span><span class="p">,</span>
+                 <span class="n">packets_session</span><span class="p">,</span> <span class="n">session_interval</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor that receives a name (for the string representation), and</span>
+<span class="sd">        tuples defining the packet size, inter-packet interval, number of</span>
+<span class="sd">        packets per session, and inter-session interval. Each tuple contains</span>
+<span class="sd">        the name of a distribution in numpy.random (or &quot;constant&quot;), and a list</span>
+<span class="sd">        of parameters to the distribution.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_packet_size</span> <span class="o">=</span> <span class="n">packet_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_packet_interval</span> <span class="o">=</span> <span class="n">packet_interval</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_packets_session</span> <span class="o">=</span> <span class="n">packets_session</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_session_interval</span> <span class="o">=</span> <span class="n">session_interval</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the profile name</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">packet_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the packet size tuple</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_packet_size</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">packet_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the inter-packet interval tuple</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_packet_interval</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">packets_session</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the packets per session tuple</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_packets_session</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">session_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the inter-session interval tuple</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_session_interval</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the string representation of this Application Profile</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;App Profile: </span><span class="si">{0.name}</span><span class="s2">&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;</span><span class="se">\n\t</span><span class="s2">Packet Size: </span><span class="si">{0.packet_size[0]}</span><span class="s2"> (</span><span class="si">{1}</span><span class="s2">)&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;</span><span class="se">\n\t</span><span class="s2">Packet Interval: </span><span class="si">{0.packet_interval[0]}</span><span class="s2"> (</span><span class="si">{2}</span><span class="s2">)&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;</span><span class="se">\n\t</span><span class="s2">Packets in Session: </span><span class="si">{0.packets_session[0]}</span><span class="s2"> (</span><span class="si">{3}</span><span class="s2">)&quot;</span> <span class="o">+</span>
+                <span class="s2">&quot;</span><span class="se">\n\t</span><span class="s2">Session Interval: </span><span class="si">{0.session_interval[0]}</span><span class="s2"> (</span><span class="si">{4}</span><span class="s2">)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="p">,</span>
+                    <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">param</span><span class="p">)</span> <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">packet_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+                    <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">param</span><span class="p">)</span> <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">packet_interval</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+                    <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">param</span><span class="p">)</span> <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">packets_session</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+                    <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">param</span><span class="p">)</span> <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_interval</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a hash of this application profile</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="o">+</span>
+                    <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">packet_size</span><span class="p">)</span> <span class="o">+</span>
+                    <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">packet_interval</span><span class="p">)</span> <span class="o">+</span>
+                    <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">packets_session</span><span class="p">)</span> <span class="o">+</span>
+                    <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session_interval</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return True if this object is equal to the parameter passed to the</span>
+<span class="sd">        method</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span> <span class="ow">and</span> \
+               <span class="bp">self</span><span class="o">.</span><span class="n">packet_size</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">packet_size</span> <span class="ow">and</span> \
+               <span class="bp">self</span><span class="o">.</span><span class="n">packet_interval</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">packet_interval</span> <span class="ow">and</span> \
+               <span class="bp">self</span><span class="o">.</span><span class="n">packets_session</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">packets_session</span> <span class="ow">and</span> \
+               <span class="bp">self</span><span class="o">.</span><span class="n">session_interval</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">session_interval</span>
+
+<div class="viewcode-block" id="AppProfile.create_app"><a class="viewcode-back" href="../../qppsim.AppProfile.html#qppsim.AppProfile.AppProfile.create_app">[docs]</a>    <span class="k">def</span> <span class="nf">create_app</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">stop_time</span><span class="p">,</span> <span class="n">ue</span><span class="p">,</span> <span class="n">default_bearer</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create an application instance based on this profile, with the provided</span>
+<span class="sd">        start and stop time, and name. The application instance is installed in</span>
+<span class="sd">        the provided UE</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">app</span> <span class="o">=</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">Application</span><span class="o">.</span><span class="n">Application</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">packet_size</span><span class="p">,</span>
+                                             <span class="bp">self</span><span class="o">.</span><span class="n">packet_interval</span><span class="p">,</span>
+                                             <span class="bp">self</span><span class="o">.</span><span class="n">packets_session</span><span class="p">,</span>
+                                             <span class="bp">self</span><span class="o">.</span><span class="n">session_interval</span><span class="p">,</span>
+                                             <span class="n">start_time</span><span class="p">,</span>
+                                             <span class="n">stop_time</span><span class="p">)</span>
+        <span class="n">qppsim</span><span class="o">.</span><span class="n">Des</span><span class="o">.</span><span class="n">get_des</span><span class="p">()</span><span class="o">.</span><span class="n">add_event</span><span class="p">(</span>
+            <span class="n">qppsim</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="n">Event</span><span class="p">(</span>
+                <span class="n">start_time</span> <span class="o">-</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">milliseconds</span><span class="o">=</span><span class="mi">100</span><span class="p">),</span> <span class="n">ue</span><span class="p">,</span> <span class="n">ue</span><span class="o">.</span><span class="n">add_app</span><span class="p">,</span> <span class="p">[</span><span class="n">app</span><span class="p">,</span> <span class="n">default_bearer</span><span class="p">]))</span>
+        <span class="k">return</span> <span class="n">app</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

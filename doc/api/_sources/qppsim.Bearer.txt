@@ -1,0 +1,14 @@
+qppsim.Bearer module
+====================
+
+.. inheritance-diagram:: qppsim.Bearer
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.Bearer
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,4 @@
+<map id="inheritance9fc506711a" name="inheritance9fc506711a">
+<area shape="rect" id="node1" href="#qppsim.qosmonitor.QosMonitorBase.QosMonitorBase" target="_top" title="Base class for QoS Monitors. Defines a method for getting and aggregating" alt="" coords="5,55,368,80"/>
+<area shape="rect" id="node2" href="#qppsim.qosmonitor.QosMonitorBase.TraceableQos" target="_top" title="Class that provides a format to trace QoS values, composed by the minimum," alt="" coords="15,5,358,31"/>
+</map>

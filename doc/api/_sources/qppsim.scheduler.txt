@@ -1,0 +1,25 @@
+qppsim.scheduler package
+========================
+
+Submodules
+----------
+
+.. toctree::
+
+   qppsim.scheduler.SchedulerBase
+   qppsim.scheduler.SchedulerRoundRobin
+
+Module Contents
+---------------
+
+.. automodule:: qppsim.scheduler
+    :members:
+    :undoc-members:
+    :show-inheritance:
+Class Diagram
+-------------
+
+.. inheritance-diagram:: qppsim.scheduler.SchedulerBase qppsim.scheduler.SchedulerRoundRobin 
+    :parts: 0
+
+

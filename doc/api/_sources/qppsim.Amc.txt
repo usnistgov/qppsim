@@ -1,0 +1,14 @@
+qppsim.Amc module
+=================
+
+.. inheritance-diagram:: qppsim.Amc
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.Amc
+    :members:
+    :undoc-members:
+    :show-inheritance:

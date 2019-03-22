@@ -1,0 +1,14 @@
+qppsim.XmlScenarioParser module
+===============================
+
+.. inheritance-diagram:: qppsim.XmlScenarioParser
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.XmlScenarioParser
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,4 @@
+<map id="inheritance558d7fa4b0" name="inheritance558d7fa4b0">
+<area shape="rect" id="node1" href="qppsim.prioritypolicy.PriorityPolicyBase.html#qppsim.prioritypolicy.PriorityPolicyBase.PriorityPolicyBase" title="Base class for the Priority Policies. Defines a method to get the GBR, MBR," alt="" coords="5,5,347,27"/>
+<area shape="rect" id="node2" href="#qppsim.prioritypolicy.PriorityPolicySample.PriorityPolicySample" title="Class with a sample Priority Policy that sets a single priority to all applications." alt="" coords="390,5,763,27"/>
+</map>

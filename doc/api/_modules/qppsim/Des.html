@@ -1,0 +1,697 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.Des &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qppsim.html">qppsim package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>qppsim.Des</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for qppsim.Des</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1">#</span>
+<span class="c1"># NIST-developed software is provided by NIST as a public service. You may</span>
+<span class="c1"># use, copy and distribute copies of the software in any medium, provided that</span>
+<span class="c1"># you keep intact this entire notice. You may improve, modify and create</span>
+<span class="c1"># derivative works of the software or any portion of the software, and you may</span>
+<span class="c1"># copy and distribute such modifications or works. Modified works should carry</span>
+<span class="c1"># a notice stating that you changed the software and should note the date and</span>
+<span class="c1"># nature of any such change. Please explicitly acknowledge the National</span>
+<span class="c1"># Institute of Standards and Technology as the source of the software.</span>
+<span class="c1">#</span>
+<span class="c1"># NIST-developed software is expressly provided &quot;AS IS.&quot; NIST MAKES NO</span>
+<span class="c1"># WARRANTY OF ANY KIND, EXPRESS, IMPLIED, IN FACT OR ARISING BY OPERATION OF</span>
+<span class="c1"># LAW, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTY OF MERCHANTABILITY,</span>
+<span class="c1"># FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT AND DATA ACCURACY. NIST</span>
+<span class="c1"># NEITHER REPRESENTS NOR WARRANTS THAT THE OPERATION OF THE SOFTWARE WILL BE</span>
+<span class="c1"># UNINTERRUPTED OR ERROR-FREE, OR THAT ANY DEFECTS WILL BE CORRECTED. NIST</span>
+<span class="c1"># DOES NOT WARRANT OR MAKE ANY REPRESENTATIONS REGARDING THE USE OF THE</span>
+<span class="c1"># SOFTWARE OR THE RESULTS THEREOF, INCLUDING BUT NOT LIMITED TO THE</span>
+<span class="c1"># CORRECTNESS, ACCURACY, RELIABILITY, OR USEFULNESS OF THE SOFTWARE.</span>
+<span class="c1">#</span>
+<span class="c1"># You are solely responsible for determining the appropriateness of using and</span>
+<span class="c1"># distributing the software and you assume all risks associated with its use,</span>
+<span class="c1"># including but not limited to the risks and costs of program errors,</span>
+<span class="c1"># compliance with applicable laws, damage to or loss of data, programs or</span>
+<span class="c1"># equipment, and the unavailability or interruption of operation. This</span>
+<span class="c1"># software is not intended to be used in any situation where a failure could</span>
+<span class="c1"># cause risk of injury or damage to property. The software developed by NIST</span>
+<span class="c1"># employees is not subject to copyright protection within the United States.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Module with the DES code. The Des class is static, and the &#39;get_des&#39; method</span>
+<span class="sd">provides access to the active instance.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">import</span> <span class="nn">sortedcontainers</span>
+
+<span class="kn">import</span> <span class="nn">qppsim.BearerList</span>
+<span class="kn">import</span> <span class="nn">qppsim.Event</span>
+<span class="kn">import</span> <span class="nn">qppsim.Time</span>
+<span class="kn">import</span> <span class="nn">qppsim.TraceWriter</span>
+
+<span class="kn">import</span> <span class="nn">qppsim.accesscontrol.AccessControlTraceOnly</span>
+<span class="kn">import</span> <span class="nn">qppsim.preemption.PreemptionDummy</span>
+<span class="kn">import</span> <span class="nn">qppsim.qosmonitor.QosMonitorDummy</span>
+<span class="kn">import</span> <span class="nn">qppsim.scheduler.SchedulerRoundRobin</span>
+
+
+<span class="c1">#: Reference to the active instance of this class</span>
+<span class="n">instance</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<div class="viewcode-block" id="get_des"><a class="viewcode-back" href="../../qppsim.Des.html#qppsim.Des.get_des">[docs]</a><span class="k">def</span> <span class="nf">get_des</span><span class="p">(</span><span class="n">new_instance</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get a reference to the instance of the Des class. If there is none,</span>
+<span class="sd">    a new instance is created with the default parameters.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">instance</span>
+    <span class="k">if</span> <span class="n">instance</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">new_instance</span><span class="p">:</span>
+        <span class="n">instance</span> <span class="o">=</span> <span class="n">Des</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">instance</span></div>
+
+
+<div class="viewcode-block" id="Des"><a class="viewcode-back" href="../../qppsim.Des.html#qppsim.Des.Des">[docs]</a><span class="k">class</span> <span class="nc">Des</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class that represents the Discrete Event Simulation engine. It stores</span>
+<span class="sd">    the default configuration for default bearers, trace filenames, seed,</span>
+<span class="sd">    global packet ID counter, current simulation time, Priority, Access Control,</span>
+<span class="sd">    Pre-emption, Scheduler and QoS Monitor policies, TX error probability,</span>
+<span class="sd">    and the reference to the TraceWriter.</span>
+
+<span class="sd">    Methods are provided for getting random values from random distributions,</span>
+<span class="sd">    computing if a transmission succeeded, get the current simulation time,</span>
+<span class="sd">    start and stop the simulation, add events to the DES, and activate and</span>
+<span class="sd">    deactivate bearers and specific times.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_rbs</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">start_packet_id</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">default_qci</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>
+                 <span class="n">default_arp</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">default_mbr</span><span class="o">=</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="p">,</span>
+                 <span class="n">rtx_threshold</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+                 <span class="n">bearer_stats_window_size</span><span class="o">=</span><span class="n">qppsim</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">60</span><span class="p">),</span>
+                 <span class="n">seed</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stop_time</span><span class="o">=</span><span class="n">qppsim</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+                 <span class="n">priority_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">access_control_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">preemption_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">qos_monitor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">scheduler</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">output_dir</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span>
+                 <span class="n">topology_filename</span><span class="o">=</span><span class="s2">&quot;topologyTrace.txt&quot;</span><span class="p">,</span>
+                 <span class="n">app_traffic_filename</span><span class="o">=</span><span class="s2">&quot;trafficTrace.txt&quot;</span><span class="p">,</span>
+                 <span class="n">bearer_filename</span><span class="o">=</span><span class="s2">&quot;bearerTrace.txt&quot;</span><span class="p">,</span>
+                 <span class="n">arp_filename</span><span class="o">=</span><span class="s2">&quot;arpTrace.txt&quot;</span><span class="p">,</span>
+                 <span class="n">qos_filename</span><span class="o">=</span><span class="s2">&quot;qosTrace.txt&quot;</span><span class="p">,</span>
+                 <span class="n">trace_qos</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">preempt_qos</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">qos_monitor_interval</span><span class="o">=</span><span class="n">qppsim</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">1</span><span class="p">)):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor. Provides default values for the filenames for traces,</span>
+<span class="sd">        QoS parameters for default bearers, TX error probability, seed,</span>
+<span class="sd">        Priority, Access Control, Pre-emption, QoS Monitor and Scheduler policies,</span>
+<span class="sd">        QoS Monitor interval, ending simulation time, and total number of RBs.</span>
+
+<span class="sd">        Point the global reference to the active instance. dynamically load the</span>
+<span class="sd">        policies modules (may be outside this package), create the TraceWriter</span>
+<span class="sd">        instance and initialize the trace files, and reset the event list,</span>
+<span class="sd">        packet ID counter, and current simulation time.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">global</span> <span class="n">instance</span>
+        <span class="k">if</span> <span class="n">instance</span><span class="p">:</span>
+            <span class="k">del</span> <span class="n">instance</span>
+        <span class="n">instance</span> <span class="o">=</span> <span class="bp">self</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_num_rbs</span> <span class="o">=</span> <span class="n">num_rbs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_packet_id</span> <span class="o">=</span> <span class="n">start_packet_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_default_qci</span> <span class="o">=</span> <span class="n">default_qci</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_default_arp</span> <span class="o">=</span> <span class="n">default_arp</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_default_mbr</span> <span class="o">=</span> <span class="n">default_mbr</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rtx_threshold</span> <span class="o">=</span> <span class="n">rtx_threshold</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bearer_stats_window_size</span> <span class="o">=</span> <span class="n">bearer_stats_window_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_seed</span> <span class="o">=</span> <span class="n">seed</span>
+        <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stop_time</span> <span class="o">=</span> <span class="n">stop_time</span>
+
+        <span class="k">if</span> <span class="n">priority_policy</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;priority_policy Must Be Defined Manually&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_priority_policy</span> <span class="o">=</span> <span class="n">priority_policy</span>
+
+        <span class="k">if</span> <span class="n">access_control_policy</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_access_control_policy</span> <span class="o">=</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">accesscontrol</span><span class="o">.</span><span class="n">AccessControlTraceOnly</span><span class="o">.</span><span class="n">AccessControlTraceOnly</span><span class="p">(</span><span class="n">num_rbs</span><span class="o">=</span><span class="n">num_rbs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_access_control_policy</span> <span class="o">=</span> <span class="n">access_control_policy</span>
+
+        <span class="k">if</span> <span class="n">preemption_policy</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_preemption_policy</span> <span class="o">=</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">preemption</span><span class="o">.</span><span class="n">PreemptionDummy</span><span class="o">.</span><span class="n">PreemptionDummy</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_preemption_policy</span> <span class="o">=</span> <span class="n">preemption_policy</span>
+
+        <span class="k">if</span> <span class="n">qos_monitor</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_qos_monitor</span> <span class="o">=</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">qosmonitor</span><span class="o">.</span><span class="n">QosMonitorDummy</span><span class="o">.</span><span class="n">QosMonitorDummy</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_qos_monitor</span> <span class="o">=</span> <span class="n">qos_monitor</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qos_monitor</span><span class="o">.</span><span class="n">trace_qos</span> <span class="o">=</span> <span class="n">trace_qos</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qos_monitor</span><span class="o">.</span><span class="n">preempt_qos</span> <span class="o">=</span> <span class="n">preempt_qos</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qos_monitor_interval</span> <span class="o">=</span> <span class="n">qos_monitor_interval</span>
+
+        <span class="k">if</span> <span class="n">scheduler</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_scheduler</span> <span class="o">=</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">scheduler</span><span class="o">.</span><span class="n">SchedulerRoundRobin</span><span class="o">.</span><span class="n">SchedulerRoundRobin</span><span class="p">(</span><span class="n">num_rbs</span><span class="o">=</span><span class="n">num_rbs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_scheduler</span> <span class="o">=</span> <span class="n">scheduler</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_output_dir</span> <span class="o">=</span> <span class="n">output_dir</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_topology_filename</span> <span class="o">=</span> <span class="n">topology_filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_app_traffic_filename</span> <span class="o">=</span> <span class="n">app_traffic_filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bearer_filename</span> <span class="o">=</span> <span class="n">bearer_filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_arp_filename</span> <span class="o">=</span> <span class="n">arp_filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qos_filename</span> <span class="o">=</span> <span class="n">qos_filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trace_writer</span> <span class="o">=</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">TraceWriter</span><span class="o">.</span><span class="n">TraceWriter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">output_dir</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">topology_filename</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">app_traffic_filename</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">bearer_filename</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">arp_filename</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">qos_filename</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trace_writer</span><span class="o">.</span><span class="n">init_traces</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_events</span> <span class="o">=</span> <span class="n">sortedcontainers</span><span class="o">.</span><span class="n">SortedList</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_current_time</span> <span class="o">=</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">ZERO_TIME</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">num_rbs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the total number of RBs to allocate in each TTI.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_num_rbs</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">default_qci</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the QCI for default bearers.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_default_qci</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">default_arp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the ARP for default bearers.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_default_arp</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">default_mbr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the MBR for default bearers.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_default_mbr</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rtx_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return probability of TX error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rtx_threshold</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">bearer_stats_window_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the length of time for which the bearers will store QoS metrics.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bearer_stats_window_size</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">seed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the random seed used in the simulation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_seed</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">stop_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the simulation stop time.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stop_time</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">priority_policy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the reference to the active Priority policy.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_priority_policy</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">access_control_policy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the reference to the active Access Control module.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_access_control_policy</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">preemption_policy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the reference to the active Pre-emption module.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preemption_policy</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qos_monitor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the reference to the active QoS Monitor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qos_monitor</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">scheduler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the reference to the active Scheduler.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scheduler</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">output_dir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the output directory for the traces.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_output_dir</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">topology_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the topology trace filename</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_topology_filename</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">app_traffic_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the filename for the application traffic trace.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_app_traffic_filename</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">bearer_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the filename for the bearer trace.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bearer_filename</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">arp_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the filename for the ARP trace.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_arp_filename</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qos_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the filename for the QoS trace.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qos_filename</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">trace_writer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a reference to the active TraceWriter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trace_writer</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qos_monitor_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the interval at which the scheduler checks the bearers QoS.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qos_monitor_interval</span>
+
+    <span class="nd">@qos_monitor_interval</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">qos_monitor_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qos_monitor_interval</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the interval at which the scheduler checks the bearers QoS.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qos_monitor_interval</span> <span class="o">=</span> <span class="n">qos_monitor_interval</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">packet_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the last packet ID assigned</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_packet_id</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the string representation of the DES.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">string</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;&quot;&quot;DES:</span>
+<span class="se">\t</span><span class="si">{0.num_rbs}</span><span class="s2"> RBs</span>
+<span class="se">\t</span><span class="s2">Next Packet ID: </span><span class="si">{0.packet_id}</span><span class="s2"></span>
+<span class="se">\t</span><span class="s2">Default bearer config: QCI </span><span class="si">{0.default_qci}</span><span class="s2"> ARP </span><span class="si">{0.default_arp}</span><span class="s2"> MBR </span><span class="si">{0.default_mbr}</span><span class="s2"></span>
+<span class="se">\t</span><span class="s2">RTX Threshold: </span><span class="si">{0.rtx_threshold}</span><span class="s2"></span>
+<span class="se">\t</span><span class="s2">Bearer Stats Window Size: </span><span class="si">{0.bearer_stats_window_size}</span><span class="s2"></span>
+<span class="se">\t</span><span class="s2">Seed: </span><span class="si">{0.seed}</span><span class="s2"></span>
+<span class="se">\t</span><span class="s2">Stop Time: </span><span class="si">{1}</span><span class="s2"></span>
+<span class="se">\t</span><span class="s2">Policies:</span>
+<span class="se">\t\t</span><span class="s2">Application Priority Policy: </span><span class="si">{0.priority_policy}</span><span class="s2"></span>
+<span class="se">\t\t</span><span class="s2">Access Control Policy: </span><span class="si">{0.access_control_policy}</span><span class="s2"></span>
+<span class="se">\t\t</span><span class="s2">Pre-emption Policy: </span><span class="si">{0.preemption_policy}</span><span class="s2"></span>
+<span class="se">\t\t</span><span class="s2">QoS Monitor Policy: </span><span class="si">{0.qos_monitor}</span><span class="s2"></span>
+<span class="se">\t</span><span class="s2">Scheduler: </span><span class="si">{0.scheduler}</span><span class="s2"></span>
+<span class="se">\t</span><span class="s2">Output Directory: </span><span class="si">{2}</span><span class="s2"></span>
+<span class="se">\t\t</span><span class="s2">Topology Trace File Name: </span><span class="si">{0.topology_filename}</span><span class="s2"></span>
+<span class="se">\t\t</span><span class="s2">Application Traffic Trace File Name: </span><span class="si">{0.app_traffic_filename}</span><span class="s2"></span>
+<span class="se">\t\t</span><span class="s2">Bearer Trace File Name: </span><span class="si">{0.bearer_filename}</span><span class="s2"></span>
+<span class="se">\t\t</span><span class="s2">Access Control Trace File Name: </span><span class="si">{0.arp_filename}</span><span class="s2"></span>
+<span class="se">\t\t</span><span class="s2">QoS Trace File Name: </span><span class="si">{0.qos_filename}</span><span class="s2"></span>
+<span class="se">\t</span><span class="s2">Current Time: </span><span class="si">{3}</span><span class="s2"></span>
+<span class="se">\t</span><span class="s2">EVENTS:</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop_time</span><span class="o">.</span><span class="n">milliseconds</span><span class="p">,</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">output_dir</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+
+        <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_events</span><span class="p">:</span>
+            <span class="n">string</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\t\t</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">string</span>
+
+<div class="viewcode-block" id="Des.get_random_value"><a class="viewcode-back" href="../../qppsim.Des.html#qppsim.Des.Des.get_random_value">[docs]</a>    <span class="k">def</span> <span class="nf">get_random_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">distribution_name</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a random value from the specified random distribution, with the</span>
+<span class="sd">        provided parameters. If &#39;time&#39; is True, the requested random value is</span>
+<span class="sd">        supposed to be a time, so we need to multiply it by 1000 to convert it</span>
+<span class="sd">        to milliseconds (as the user specifies the random parameters for</span>
+<span class="sd">        timings in seconds, for convenience).</span>
+
+<span class="sd">        :return a random value from the passed numpy.random function, as A Time object if time is True</span>
+
+<span class="sd">        :rtype float, qppsim.Time.Time</span>
+
+<span class="sd">        :raise AttributeError</span>
+<span class="sd">        The random distribution specified by distribution_name was not found</span>
+<span class="sd">        in numpy.random</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">distribution_name</span> <span class="o">==</span> <span class="s2">&quot;constant&quot;</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">random_function</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="p">,</span> <span class="n">distribution_name</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Random Distribution &#39;</span><span class="si">{0}</span><span class="s2">&#39; not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">distribution_name</span><span class="p">),</span>
+                      <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+                <span class="k">raise</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">random_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">time</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+<div class="viewcode-block" id="Des.get_tx_success"><a class="viewcode-back" href="../../qppsim.Des.html#qppsim.Des.Des.get_tx_success">[docs]</a>    <span class="k">def</span> <span class="nf">get_tx_success</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check if a transmission is successful or not. It uses a uniform random</span>
+<span class="sd">        distribution and the TX error probability.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">value</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rtx_threshold</span></div>
+
+<div class="viewcode-block" id="Des.get_packet_id"><a class="viewcode-back" href="../../qppsim.Des.html#qppsim.Des.Des.get_packet_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_packet_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the next available Packet ID, and increase the counter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_packet_id</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_packet_id</span></div>
+
+<div class="viewcode-block" id="Des.now"><a class="viewcode-back" href="../../qppsim.Des.html#qppsim.Des.Des.now">[docs]</a>    <span class="k">def</span> <span class="nf">now</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the current simulation time.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_current_time</span></div>
+
+<div class="viewcode-block" id="Des.add_event"><a class="viewcode-back" href="../../qppsim.Des.html#qppsim.Des.Des.add_event">[docs]</a>    <span class="k">def</span> <span class="nf">add_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add an event to the DES event queue.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">event</span><span class="o">.</span><span class="n">time</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span>\
+            <span class="p">(</span><span class="s2">&quot;Attempting to schedule an event in the past!&quot;</span> <span class="o">+</span>
+             <span class="s2">&quot;</span><span class="se">\n\t</span><span class="s2">Current time: </span><span class="si">{0}</span><span class="se">\n\t</span><span class="s2">Event time: </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                 <span class="bp">self</span><span class="o">.</span><span class="n">_current_time</span><span class="o">.</span><span class="n">milliseconds</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">milliseconds</span>
+                 <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_events</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">event</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Des.end_simulation"><a class="viewcode-back" href="../../qppsim.Des.html#qppsim.Des.Des.end_simulation">[docs]</a>    <span class="k">def</span> <span class="nf">end_simulation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        End the simulation, and close the trace filenames.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trace_writer</span><span class="o">.</span><span class="n">close_traces</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Des.start_simulation"><a class="viewcode-back" href="../../qppsim.Des.html#qppsim.Des.Des.start_simulation">[docs]</a>    <span class="k">def</span> <span class="nf">start_simulation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Start the simulation. Create the events to stop the simulation and the</span>
+<span class="sd">        scheduling for the first TTI, and then process the event queue until we</span>
+<span class="sd">        hit the &#39;end_simulation&#39; event.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_event</span><span class="p">(</span><span class="n">qppsim</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="n">Event</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stop_time</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end_simulation</span><span class="p">,</span> <span class="p">[]))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_event</span><span class="p">(</span><span class="n">qppsim</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="n">Event</span><span class="p">(</span><span class="n">qppsim</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">Time</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheduler</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheduler</span><span class="o">.</span><span class="n">schedule</span><span class="p">,</span> <span class="p">[]))</span>
+
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">_events</span><span class="p">:</span>
+            <span class="n">event</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_events</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="n">event</span><span class="o">.</span><span class="n">time</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_current_time</span><span class="p">,</span> <span class="s2">&quot;Attempting to run an event in the past!&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_current_time</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">time</span>
+            <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">function_</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">end_simulation</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_events</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">end_simulation</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">event</span><span class="o">.</span><span class="n">function_</span><span class="p">(</span><span class="o">*</span><span class="n">event</span><span class="o">.</span><span class="n">args</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Des.deactivate_bearer_at_time"><a class="viewcode-back" href="../../qppsim.Des.html#qppsim.Des.Des.deactivate_bearer_at_time">[docs]</a>    <span class="k">def</span> <span class="nf">deactivate_bearer_at_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">ue</span><span class="p">,</span> <span class="n">bid</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add an event to deactivate a bearer at a given time.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_event</span><span class="p">(</span><span class="n">qppsim</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="n">Event</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_deactivate_bearer</span><span class="p">,</span> <span class="p">[</span><span class="n">ue</span><span class="p">,</span> <span class="n">bid</span><span class="p">]))</span></div>
+
+<div class="viewcode-block" id="Des.do_deactivate_bearer"><a class="viewcode-back" href="../../qppsim.Des.html#qppsim.Des.Des.do_deactivate_bearer">[docs]</a>    <span class="k">def</span> <span class="nf">do_deactivate_bearer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ue</span><span class="p">,</span> <span class="n">bid</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Deactivate a bearer.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Find the bearer</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">bearer</span> <span class="o">=</span> <span class="n">qppsim</span><span class="o">.</span><span class="n">BearerList</span><span class="o">.</span><span class="n">get_bearer_list</span><span class="p">()</span><span class="o">.</span><span class="n">bearers</span><span class="p">[</span><span class="n">ue</span><span class="p">][</span><span class="n">bid</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">trace_writer</span><span class="o">.</span><span class="n">trace_arp_deactivation</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_current_time</span><span class="p">,</span> <span class="n">bearer</span><span class="o">.</span><span class="n">ue</span><span class="o">.</span><span class="n">imsi</span><span class="p">,</span> <span class="n">bearer</span><span class="o">.</span><span class="n">bid</span><span class="p">,</span> <span class="n">bearer</span><span class="o">.</span><span class="n">qci</span><span class="p">,</span>
+                <span class="n">bearer</span><span class="o">.</span><span class="n">gbr</span><span class="p">,</span> <span class="n">bearer</span><span class="o">.</span><span class="n">arp</span><span class="p">,</span> <span class="n">bearer</span><span class="o">.</span><span class="n">pvi</span><span class="p">,</span> <span class="n">bearer</span><span class="o">.</span><span class="n">pci</span><span class="p">)</span>
+            <span class="n">bearer</span><span class="o">.</span><span class="n">teardown</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;At </span><span class="si">{0}</span><span class="s2"> Attempting to deactivate bearer that does not exist! IMSI </span><span class="si">{1}</span><span class="s2"> BID </span><span class="si">{2}</span><span class="s2">!!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span> <span class="n">ue</span><span class="o">.</span><span class="n">imsi</span><span class="p">,</span> <span class="n">bid</span><span class="p">))</span>
+            <span class="k">raise</span> <span class="n">err</span></div>
+
+<div class="viewcode-block" id="Des.activate_bearer_at_time"><a class="viewcode-back" href="../../qppsim.Des.html#qppsim.Des.Des.activate_bearer_at_time">[docs]</a>    <span class="k">def</span> <span class="nf">activate_bearer_at_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">app</span><span class="p">,</span> <span class="n">qci</span><span class="p">,</span> <span class="n">gbr</span><span class="p">,</span> <span class="n">mbr</span><span class="p">,</span> <span class="n">pci</span><span class="p">,</span> <span class="n">pvi</span><span class="p">,</span> <span class="n">arp</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add an event to activate a bearer for a given application at a given time.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_event</span><span class="p">(</span><span class="n">qppsim</span><span class="o">.</span><span class="n">Event</span><span class="o">.</span><span class="n">Event</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_activate_bearer</span><span class="p">,</span>
+                                          <span class="p">[</span><span class="n">app</span><span class="p">,</span> <span class="n">qci</span><span class="p">,</span> <span class="n">gbr</span><span class="p">,</span> <span class="n">mbr</span><span class="p">,</span> <span class="n">pci</span><span class="p">,</span> <span class="n">pvi</span><span class="p">,</span> <span class="n">arp</span><span class="p">]))</span></div>
+
+<div class="viewcode-block" id="Des.do_activate_bearer"><a class="viewcode-back" href="../../qppsim.Des.html#qppsim.Des.Des.do_activate_bearer">[docs]</a>    <span class="k">def</span> <span class="nf">do_activate_bearer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">,</span> <span class="n">qci</span><span class="p">,</span> <span class="n">gbr</span><span class="p">,</span> <span class="n">mbr</span><span class="p">,</span> <span class="n">pci</span><span class="p">,</span> <span class="n">pvi</span><span class="p">,</span> <span class="n">arp</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Activate a bearer for a given application at a given time.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new_bearer</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">bearer</span><span class="o">.</span><span class="n">ue</span><span class="o">.</span><span class="n">add_bearer</span><span class="p">(</span><span class="n">qci</span><span class="p">,</span> <span class="n">gbr</span><span class="p">,</span> <span class="n">mbr</span><span class="p">,</span> <span class="n">pci</span><span class="p">,</span> <span class="n">pvi</span><span class="p">,</span> <span class="n">arp</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">new_bearer</span><span class="o">.</span><span class="n">bid</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">app</span><span class="o">.</span><span class="n">change_bearer</span><span class="p">(</span><span class="n">new_bearer</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_bearer</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">new_bearer</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

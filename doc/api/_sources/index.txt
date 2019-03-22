@@ -1,0 +1,27 @@
+.. qppsim documentation master file, created by
+   sphinx-quickstart on Thu Nov 29 13:33:33 2018.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+qppsim Documentation
+==================================
+
+.. toctree::
+   :maxdepth: 4
+   :caption: Contents:
+
+   qppsim
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+
+Inheritance Diagram
+-------------------
+
+.. inheritance-diagram:: qppsim.Amc qppsim.Application qppsim.AppProfile qppsim.Bearer qppsim.BearerList qppsim.Des qppsim.Event qppsim.Packet qppsim.Time qppsim.TraceWriter qppsim.Ue qppsim.XmlScenarioParser qppsim.accesscontrol.AccessControlBase qppsim.accesscontrol.AccessControlSample qppsim.accesscontrol.AccessControlTraceOnly qppsim.preemption.PreemptionBase qppsim.preemption.PreemptionDummy qppsim.preemption.PreemptionSamplePreemptAll qppsim.preemption.PreemptionSamplePreemptSome qppsim.prioritypolicy.PriorityPolicyBase qppsim.prioritypolicy.PriorityPolicySample qppsim.qosmonitor.QosMonitorBase qppsim.qosmonitor.QosMonitorDefault qppsim.qosmonitor.QosMonitorDummy qppsim.scheduler.SchedulerBase qppsim.scheduler.SchedulerRoundRobin

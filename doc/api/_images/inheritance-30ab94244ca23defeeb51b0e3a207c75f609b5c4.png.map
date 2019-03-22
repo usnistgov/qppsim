@@ -1,0 +1,4 @@
+<map id="inheritance3f71aebdf0" name="inheritance3f71aebdf0">
+<area shape="rect" id="node1" href="qppsim.scheduler.SchedulerBase.html#qppsim.scheduler.SchedulerBase.SchedulerBase" target="_top" title="Base class for the schedulers. Provides a basic constructor that must be" alt="" coords="5,5,323,29"/>
+<area shape="rect" id="node2" href="#qppsim.scheduler.SchedulerRoundRobin.SchedulerRoundRobin" target="_top" title="Class with an implementation of a Round&#45;Robin scheduler." alt="" coords="368,5,763,29"/>
+</map>

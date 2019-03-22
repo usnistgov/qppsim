@@ -1,0 +1,14 @@
+qppsim.prioritypolicy.PriorityPolicyBase module
+===============================================
+
+.. inheritance-diagram:: qppsim.prioritypolicy.PriorityPolicyBase
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.prioritypolicy.PriorityPolicyBase
+    :members:
+    :undoc-members:
+    :show-inheritance:

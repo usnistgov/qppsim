@@ -1,0 +1,14 @@
+qppsim.Event module
+===================
+
+.. inheritance-diagram:: qppsim.Event
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.Event
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,14 @@
+qppsim.Ue module
+================
+
+.. inheritance-diagram:: qppsim.Ue
+    :parts: 0
+
+
+Documentation
+-------------
+
+.. automodule:: qppsim.Ue
+    :members:
+    :undoc-members:
+    :show-inheritance:

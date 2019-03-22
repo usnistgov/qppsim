@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.Time module &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qppsim.TraceWriter module" href="qppsim.TraceWriter.html" />
+    <link rel="prev" title="qppsim.Packet module" href="qppsim.Packet.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="qppsim.html">qppsim package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="qppsim.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Amc.html">qppsim.Amc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.AppProfile.html">qppsim.AppProfile module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Application.html">qppsim.Application module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Bearer.html">qppsim.Bearer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.BearerList.html">qppsim.BearerList module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Des.html">qppsim.Des module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Event.html">qppsim.Event module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Packet.html">qppsim.Packet module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">qppsim.Time module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-qppsim.Time">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.TraceWriter.html">qppsim.TraceWriter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Ue.html">qppsim.Ue module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.XmlScenarioParser.html">qppsim.XmlScenarioParser module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="qppsim.html">qppsim package</a> &raquo;</li>
+        
+      <li>qppsim.Time module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/qppsim.Time.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="qppsim-time-module">
+<h1>qppsim.Time module<a class="headerlink" href="#qppsim-time-module" title="Permalink to this headline">¶</a></h1>
+<img src="_images/inheritance-437e69e66b820ab62f26f5e2dcb848641c9b802a.png" alt="Inheritance diagram of qppsim.Time" usemap="#inheritancec6ca35023f" class="inheritance"/>
+<map id="inheritancec6ca35023f" name="inheritancec6ca35023f">
+<area shape="rect" id="node1" href="#qppsim.Time.Time" target="_top" title="Immutable Representation of Time in the simulation." alt="" coords="5,5,144,31"/>
+</map>
+<div class="section" id="module-qppsim.Time">
+<span id="documentation"></span><h2>Documentation<a class="headerlink" href="#module-qppsim.Time" title="Permalink to this headline">¶</a></h2>
+<p>Module to allow for universal time representation
+independent of the unit.</p>
+<dl class="data">
+<dt id="qppsim.Time.ONE_MILLISECOND">
+<code class="descclassname">qppsim.Time.</code><code class="descname">ONE_MILLISECOND</code><em class="property"> = &lt;qppsim.Time.Time object&gt;</em><a class="headerlink" href="#qppsim.Time.ONE_MILLISECOND" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience constant for one millisecond</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="qppsim.Time.ONE_SECOND">
+<code class="descclassname">qppsim.Time.</code><code class="descname">ONE_SECOND</code><em class="property"> = &lt;qppsim.Time.Time object&gt;</em><a class="headerlink" href="#qppsim.Time.ONE_SECOND" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience constant for one second</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="qppsim.Time.Time">
+<em class="property">class </em><code class="descclassname">qppsim.Time.</code><code class="descname">Time</code><span class="sig-paren">(</span><em>milliseconds=0</em>, <em>seconds=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Time.html#Time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Time.Time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Immutable Representation of Time in the simulation.
+With the smallest difference between two Times being one milliseconds.</p>
+<p>The class is hashable and comparable.</p>
+<dl class="method">
+<dt id="qppsim.Time.Time.nearest_second">
+<code class="descname">nearest_second</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qppsim/Time.html#Time.nearest_second"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qppsim.Time.Time.nearest_second" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the nearest rounded second to the current value</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qppsim.Time.Time.seconds">
+<code class="descname">seconds</code><a class="headerlink" href="#qppsim.Time.Time.seconds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the stored time as seconds</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="qppsim.Time.ZERO_TIME">
+<code class="descclassname">qppsim.Time.</code><code class="descname">ZERO_TIME</code><em class="property"> = &lt;qppsim.Time.Time object&gt;</em><a class="headerlink" href="#qppsim.Time.ZERO_TIME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience constant zero milliseconds (no time)</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="qppsim.TraceWriter.html" class="btn btn-neutral float-right" title="qppsim.TraceWriter module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="qppsim.Packet.html" class="btn btn-neutral" title="qppsim.Packet module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

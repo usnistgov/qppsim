@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim.preemption.PreemptionDummy &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../qppsim.html">qppsim package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>qppsim.preemption.PreemptionDummy</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for qppsim.preemption.PreemptionDummy</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1">#</span>
+<span class="c1"># NIST-developed software is provided by NIST as a public service. You may</span>
+<span class="c1"># use, copy and distribute copies of the software in any medium, provided that</span>
+<span class="c1"># you keep intact this entire notice. You may improve, modify and create</span>
+<span class="c1"># derivative works of the software or any portion of the software, and you may</span>
+<span class="c1"># copy and distribute such modifications or works. Modified works should carry</span>
+<span class="c1"># a notice stating that you changed the software and should note the date and</span>
+<span class="c1"># nature of any such change. Please explicitly acknowledge the National</span>
+<span class="c1"># Institute of Standards and Technology as the source of the software.</span>
+<span class="c1">#</span>
+<span class="c1"># NIST-developed software is expressly provided &quot;AS IS.&quot; NIST MAKES NO</span>
+<span class="c1"># WARRANTY OF ANY KIND, EXPRESS, IMPLIED, IN FACT OR ARISING BY OPERATION OF</span>
+<span class="c1"># LAW, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTY OF MERCHANTABILITY,</span>
+<span class="c1"># FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT AND DATA ACCURACY. NIST</span>
+<span class="c1"># NEITHER REPRESENTS NOR WARRANTS THAT THE OPERATION OF THE SOFTWARE WILL BE</span>
+<span class="c1"># UNINTERRUPTED OR ERROR-FREE, OR THAT ANY DEFECTS WILL BE CORRECTED. NIST</span>
+<span class="c1"># DOES NOT WARRANT OR MAKE ANY REPRESENTATIONS REGARDING THE USE OF THE</span>
+<span class="c1"># SOFTWARE OR THE RESULTS THEREOF, INCLUDING BUT NOT LIMITED TO THE</span>
+<span class="c1"># CORRECTNESS, ACCURACY, RELIABILITY, OR USEFULNESS OF THE SOFTWARE.</span>
+<span class="c1">#</span>
+<span class="c1"># You are solely responsible for determining the appropriateness of using and</span>
+<span class="c1"># distributing the software and you assume all risks associated with its use,</span>
+<span class="c1"># including but not limited to the risks and costs of program errors,</span>
+<span class="c1"># compliance with applicable laws, damage to or loss of data, programs or</span>
+<span class="c1"># equipment, and the unavailability or interruption of operation. This</span>
+<span class="c1"># software is not intended to be used in any situation where a failure could</span>
+<span class="c1"># cause risk of injury or damage to property. The software developed by NIST</span>
+<span class="c1"># employees is not subject to copyright protection within the United States.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Module with a dummy Pre-emption implementation that never pre-empts any bearer.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">qppsim.preemption.PreemptionBase</span>
+
+
+<div class="viewcode-block" id="PreemptionDummy"><a class="viewcode-back" href="../../../qppsim.preemption.PreemptionDummy.html#qppsim.preemption.PreemptionDummy.PreemptionDummy">[docs]</a><span class="k">class</span> <span class="nc">PreemptionDummy</span><span class="p">(</span><span class="n">qppsim</span><span class="o">.</span><span class="n">preemption</span><span class="o">.</span><span class="n">PreemptionBase</span><span class="o">.</span><span class="n">PreemptionBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class for the Dummy Pre-emption implementation. This implementation always</span>
+<span class="sd">    fails to pre-empt any bearer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="PreemptionDummy.attempt_preemption"><a class="viewcode-back" href="../../../qppsim.preemption.PreemptionDummy.html#qppsim.preemption.PreemptionDummy.PreemptionDummy.attempt_preemption">[docs]</a>    <span class="k">def</span> <span class="nf">attempt_preemption</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_bearer_id</span><span class="p">,</span> <span class="n">new_bearer_arp</span><span class="p">,</span> <span class="n">rbs_needed</span><span class="p">,</span> <span class="n">rbs_used</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Attempt and fail to pre-empt bearers to free resources for a new bearer.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="p">[]</span></div>
+
+<div class="viewcode-block" id="PreemptionDummy.qos_preemption"><a class="viewcode-back" href="../../../qppsim.preemption.PreemptionDummy.html#qppsim.preemption.PreemptionDummy.PreemptionDummy.qos_preemption">[docs]</a>    <span class="k">def</span> <span class="nf">qos_preemption</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ue_imsi</span><span class="p">,</span> <span class="n">bearer_id</span><span class="p">,</span> <span class="n">bearer_arp</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Attempt and fail to pre-empt bearers to ensure that the specified bearer can</span>
+<span class="sd">        comply with its QoS contract.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="p">[]</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

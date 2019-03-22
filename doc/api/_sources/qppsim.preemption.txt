@@ -1,0 +1,27 @@
+qppsim.preemption package
+=========================
+
+Submodules
+----------
+
+.. toctree::
+
+   qppsim.preemption.PreemptionBase
+   qppsim.preemption.PreemptionDummy
+   qppsim.preemption.PreemptionSamplePreemptAll
+   qppsim.preemption.PreemptionSamplePreemptSome
+
+Module Contents
+---------------
+
+.. automodule:: qppsim.preemption
+    :members:
+    :undoc-members:
+    :show-inheritance:
+Class Diagram
+-------------
+
+.. inheritance-diagram:: qppsim.preemption.PreemptionBase qppsim.preemption.PreemptionDummy qppsim.preemption.PreemptionSamplePreemptAll qppsim.preemption.PreemptionSamplePreemptSome 
+    :parts: 0
+
+

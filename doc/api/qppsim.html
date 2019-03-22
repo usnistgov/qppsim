@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qppsim package &mdash; qppsim 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qppsim.accesscontrol package" href="qppsim.accesscontrol.html" />
+    <link rel="prev" title="qppsim Documentation" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> qppsim
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">qppsim package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.accesscontrol.html">qppsim.accesscontrol package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.preemption.html">qppsim.preemption package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.prioritypolicy.html">qppsim.prioritypolicy package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.qosmonitor.html">qppsim.qosmonitor package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.scheduler.html">qppsim.scheduler package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Amc.html">qppsim.Amc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.AppProfile.html">qppsim.AppProfile module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Application.html">qppsim.Application module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Bearer.html">qppsim.Bearer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.BearerList.html">qppsim.BearerList module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Des.html">qppsim.Des module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Event.html">qppsim.Event module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Packet.html">qppsim.Packet module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Time.html">qppsim.Time module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.TraceWriter.html">qppsim.TraceWriter module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.Ue.html">qppsim.Ue module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.XmlScenarioParser.html">qppsim.XmlScenarioParser module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">qppsim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>qppsim package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/qppsim.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="qppsim-package">
+<h1>qppsim package<a class="headerlink" href="#qppsim-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.accesscontrol.html">qppsim.accesscontrol package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.accesscontrol.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.accesscontrol.AccessControlBase.html">qppsim.accesscontrol.AccessControlBase module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.accesscontrol.AccessControlBase.html#module-qppsim.accesscontrol.AccessControlBase">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.accesscontrol.AccessControlSample.html">qppsim.accesscontrol.AccessControlSample module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.accesscontrol.AccessControlSample.html#module-qppsim.accesscontrol.AccessControlSample">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.accesscontrol.AccessControlTraceOnly.html">qppsim.accesscontrol.AccessControlTraceOnly module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.accesscontrol.AccessControlTraceOnly.html#module-qppsim.accesscontrol.AccessControlTraceOnly">Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.accesscontrol.html#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.accesscontrol.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.preemption.html">qppsim.preemption package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.preemption.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.preemption.PreemptionBase.html">qppsim.preemption.PreemptionBase module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.preemption.PreemptionBase.html#module-qppsim.preemption.PreemptionBase">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.preemption.PreemptionDummy.html">qppsim.preemption.PreemptionDummy module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.preemption.PreemptionDummy.html#module-qppsim.preemption.PreemptionDummy">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.preemption.PreemptionSamplePreemptAll.html">qppsim.preemption.PreemptionSamplePreemptAll module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.preemption.PreemptionSamplePreemptAll.html#module-qppsim.preemption.PreemptionSamplePreemptAll">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.preemption.PreemptionSamplePreemptSome.html">qppsim.preemption.PreemptionSamplePreemptSome module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.preemption.PreemptionSamplePreemptSome.html#module-qppsim.preemption.PreemptionSamplePreemptSome">Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.preemption.html#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.preemption.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.prioritypolicy.html">qppsim.prioritypolicy package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.prioritypolicy.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.prioritypolicy.PriorityPolicyBase.html">qppsim.prioritypolicy.PriorityPolicyBase module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.prioritypolicy.PriorityPolicyBase.html#module-qppsim.prioritypolicy.PriorityPolicyBase">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.prioritypolicy.PriorityPolicySample.html">qppsim.prioritypolicy.PriorityPolicySample module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.prioritypolicy.PriorityPolicySample.html#module-qppsim.prioritypolicy.PriorityPolicySample">Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.prioritypolicy.html#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.prioritypolicy.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.qosmonitor.html">qppsim.qosmonitor package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.qosmonitor.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.qosmonitor.QosMonitorBase.html">qppsim.qosmonitor.QosMonitorBase module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.qosmonitor.QosMonitorBase.html#module-qppsim.qosmonitor.QosMonitorBase">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.qosmonitor.QosMonitorDefault.html">qppsim.qosmonitor.QosMonitorDefault module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.qosmonitor.QosMonitorDefault.html#module-qppsim.qosmonitor.QosMonitorDefault">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.qosmonitor.QosMonitorDummy.html">qppsim.qosmonitor.QosMonitorDummy module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.qosmonitor.QosMonitorDummy.html#module-qppsim.qosmonitor.QosMonitorDummy">Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.qosmonitor.html#module-contents">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.qosmonitor.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.scheduler.html">qppsim.scheduler package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.scheduler.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.scheduler.SchedulerBase.html">qppsim.scheduler.SchedulerBase module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.scheduler.SchedulerBase.html#module-qppsim.scheduler.SchedulerBase">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qppsim.scheduler.SchedulerRoundRobin.html">qppsim.scheduler.SchedulerRoundRobin module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qppsim.scheduler.SchedulerRoundRobin.html#module-qppsim.scheduler.SchedulerRoundRobin">Documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.scheduler.html#module-qppsim.scheduler">Module Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.scheduler.html#class-diagram">Class Diagram</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.Amc.html">qppsim.Amc module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.Amc.html#module-qppsim.Amc">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.AppProfile.html">qppsim.AppProfile module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.AppProfile.html#module-qppsim.AppProfile">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.Application.html">qppsim.Application module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.Application.html#module-qppsim.Application">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.Bearer.html">qppsim.Bearer module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.Bearer.html#module-qppsim.Bearer">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.BearerList.html">qppsim.BearerList module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.BearerList.html#module-qppsim.BearerList">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.Des.html">qppsim.Des module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.Des.html#module-qppsim.Des">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.Event.html">qppsim.Event module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.Event.html#module-qppsim.Event">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.Packet.html">qppsim.Packet module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.Packet.html#module-qppsim.Packet">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.Time.html">qppsim.Time module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.Time.html#module-qppsim.Time">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.TraceWriter.html">qppsim.TraceWriter module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.TraceWriter.html#module-qppsim.TraceWriter">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.Ue.html">qppsim.Ue module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.Ue.html#module-qppsim.Ue">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qppsim.XmlScenarioParser.html">qppsim.XmlScenarioParser module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qppsim.XmlScenarioParser.html#module-qppsim.XmlScenarioParser">Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-qppsim"></span></div>
+<div class="section" id="class-diagram">
+<h2>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h2>
+<img src="_images/inheritance-0a934107b910bfdfb7b4d1144f3f8fce8a95d963.png" alt="Inheritance diagram of qppsim.Amc, qppsim.AppProfile, qppsim.Application, qppsim.Bearer, qppsim.BearerList, qppsim.Des, qppsim.Event, qppsim.Packet, qppsim.Time, qppsim.TraceWriter, qppsim.Ue, qppsim.XmlScenarioParser" usemap="#inheritance7478398111" class="inheritance"/>
+<map id="inheritance7478398111" name="inheritance7478398111">
+<area shape="rect" id="node1" href="qppsim.AppProfile.html#qppsim.AppProfile.AppProfile" target="_top" title="Class that defines an Application Profile." alt="" coords="38,548,243,573"/>
+<area shape="rect" id="node2" href="qppsim.Application.html#qppsim.Application.Application" target="_top" title="Class that defines an Application. An application is defined by the data" alt="" coords="32,499,249,524"/>
+<area shape="rect" id="node3" href="qppsim.Application.html#qppsim.Application.NoBearerException" target="_top" title="Exception to be raised when an Application attempts to send a packet and" alt="" coords="5,449,276,475"/>
+<area shape="rect" id="node4" href="qppsim.Bearer.html#qppsim.Bearer.Bearer" target="_top" title="Class providing the model for Bearers. It includes the QoS and ARP configuration" alt="" coords="59,400,222,425"/>
+<area shape="rect" id="node5" title="QoSTuple(min, avg, max, last)" alt="" coords="51,351,230,376"/>
+<area shape="rect" id="node6" href="qppsim.BearerList.html#qppsim.BearerList.BearerList" target="_top" title="Class that represents the list with all the bearers active in the simulation." alt="" coords="37,301,244,327"/>
+<area shape="rect" id="node7" href="qppsim.Des.html#qppsim.Des.Des" target="_top" title="Class that represents the Discrete Event Simulation engine. It stores" alt="" coords="77,252,204,277"/>
+<area shape="rect" id="node8" href="qppsim.Event.html#qppsim.Event.Event" target="_top" title="Class that models a simulation event. It consists of the time at which the" alt="" coords="66,203,215,228"/>
+<area shape="rect" id="node9" href="qppsim.Packet.html#qppsim.Packet.Packet" target="_top" title="Class that models a Packet. A Packet contains the time at which is was" alt="" coords="60,153,221,179"/>
+<area shape="rect" id="node10" href="qppsim.Time.html#qppsim.Time.Time" target="_top" title="Immutable Representation of Time in the simulation." alt="" coords="71,104,210,129"/>
+<area shape="rect" id="node11" href="qppsim.TraceWriter.html#qppsim.TraceWriter.TraceWriter" target="_top" title="Class that provides all the tracing services for the simulation: Application" alt="" coords="33,55,248,80"/>
+<area shape="rect" id="node12" href="qppsim.Ue.html#qppsim.Ue.Ue" target="_top" title="Class that models a UE. A UE keeps track of the last BID and port used, and" alt="" coords="84,5,197,31"/>
+</map>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="qppsim.accesscontrol.html" class="btn btn-neutral float-right" title="qppsim.accesscontrol package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="qppsim Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: ''
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
